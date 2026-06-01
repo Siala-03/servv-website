@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -326,7 +325,7 @@ export function StaffManagement() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Net Sales (Week)</span>
-                    <span className="font-bold">$3,240.50</span>
+                    <span className="font-bold">RWF 4,200,000</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-600">Avg Tip %</span>

@@ -1,12 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  MonitorSmartphone,
   Package,
   ShoppingBag,
   BarChart3,
-  LayoutGrid,
   Users,
   UtensilsCrossed,
   Wine,
@@ -40,13 +37,11 @@ export function Home() {
               className="max-w-2xl">
               
               <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Smarter Hospitality <br />
-                <span className="text-brand-coral">Starts Here</span>
+                Africa’s Hospitality IT Partner<br />
+                <span className="text-brand-coral">Servv: All-in-One Solutions</span>
               </h1>
               <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                The all-in-one POS and management platform for restaurants,
-                bars, hotels, and spas. Software + hardware built to grow your
-                business.
+                Servv provides comprehensive IT solutions for the hospitality industry in Africa. From restaurant and hotel management systems (RMS & HMS) to digital marketing, website development, and custom software/app development, we empower your business to thrive in a digital world.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 max-w-md">
@@ -133,7 +128,7 @@ export function Home() {
                     <div className="p-4 border-t border-gray-100 bg-gray-50 rounded-b-xl">
                       <div className="flex justify-between font-bold text-lg mb-4">
                         <span>Total</span>
-                        <span>$42.50</span>
+                        <span>RWF 42,500</span>
                       </div>
                       <div className="w-full h-12 bg-brand-coral rounded-lg"></div>
                     </div>
@@ -161,7 +156,7 @@ export function Home() {
                     Daily Revenue
                   </div>
                   <div className="text-xl font-bold text-brand-navy">
-                    $4,250.00
+                    RWF 4,250,000
                   </div>
                 </div>
               </motion.div>
@@ -199,94 +194,66 @@ export function Home() {
         <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      {/* FEATURES OVERVIEW SECTION */}
+      {/* SOLUTIONS OVERVIEW SECTION */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
-              The perfect operating system for your hospitality business
+              IT Solutions for Hospitality
             </h2>
             <p className="text-xl text-gray-600">
-              Everything you need to manage orders, staff, inventory, and guests
-              in one unified platform.
+              Restaurant & Hotel Management (RMS & HMS), Digital Marketing, Website Development, and Custom Software/App Development—all tailored for Africa’s hospitality industry.
             </p>
           </div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-            {
-              title: 'Point of Sale',
-              desc: 'Fast, intuitive POS for dine-in, takeaway & delivery. Built for speed during rush hours.',
-              icon: MonitorSmartphone,
-              link: '/features/pos'
-            },
-            {
-              title: 'Inventory Management',
-              desc: 'Real-time stock tracking, recipe costing, and automated low-stock alerts.',
-              icon: Package,
-              link: '/features/inventory'
-            },
-            {
-              title: 'Online Ordering',
-              desc: 'Accept orders directly from your website and integrate seamlessly with delivery apps.',
-              icon: ShoppingBag,
-              link: '/features/online-ordering'
-            },
-            {
-              title: 'Analytics & Reporting',
-              desc: 'Data-driven insights to understand your best sellers, peak hours, and grow revenue.',
-              icon: BarChart3,
-              link: '/features/analytics'
-            },
-            {
-              title: 'Table Management',
-              desc: 'Smart floor plans, reservation management, and real-time table status tracking.',
-              icon: LayoutGrid,
-              link: '/features/table-management'
-            },
-            {
-              title: 'Staff Management',
-              desc: 'Easy scheduling, time tracking, performance metrics, and payroll integrations.',
-              icon: Users,
-              link: '/features/staff-management'
-            }].
-            map((feature, i) =>
             <motion.div
-              key={i}
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                duration: 0.5,
-                delay: i * 0.1
-              }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
               className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
-              
-                <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
-                  <feature.icon className="w-7 h-7" />
-                </div>
-                <h3 className="text-2xl font-bold font-heading mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {feature.desc}
-                </p>
-                <Link
-                to={feature.link}
-                className="inline-flex items-center font-semibold text-brand-coral hover:text-brand-coral-dark transition-colors">
-                
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </motion.div>
-            )}
+              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
+                RMS
+              </div>
+              <h3 className="text-2xl font-bold font-heading mb-3">Servv RMS</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Restaurant Management System: POS, inventory, staff, and table management, online ordering, and analytics—all in one platform.
+              </p>
+              <Link to="/rms" className="inline-flex items-center font-semibold text-brand-coral hover:text-brand-coral-dark transition-colors">
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
+              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
+                HMS
+              </div>
+              <h3 className="text-2xl font-bold font-heading mb-3">Servv HMS</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Hotel Management System: Guest management, room service, spa scheduling, and property management for hotels and spas.
+              </p>
+              <Link to="/hms" className="inline-flex items-center font-semibold text-brand-coral hover:text-brand-coral-dark transition-colors">
+                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
+              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
+                <span className="font-bold">Digital</span>
+              </div>
+              <h3 className="text-2xl font-bold font-heading mb-3">Digital Marketing & Web</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed">
+                Boost your brand with digital marketing, website development, and custom software/app solutions designed for hospitality businesses.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -311,52 +278,53 @@ export function Home() {
               desc: 'Full-service and quick-service restaurant management. Handle complex modifiers, coursing, and split checks with ease.',
               icon: UtensilsCrossed,
               link: '/outlets/restaurants',
-              color: 'bg-orange-50 text-orange-600'
+              color: 'bg-orange-50 text-orange-600',
+              image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
             },
             {
               title: 'Bars & Lounges',
               desc: 'Fast tab management, happy hour pricing automation, and robust inventory controls for nightlife operations.',
               icon: Wine,
               link: '/outlets/bars-lounges',
-              color: 'bg-purple-50 text-purple-600'
+              color: 'bg-purple-50 text-purple-600',
+              image: 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&q=80'
             },
             {
               title: 'Hotels & Spas',
               desc: 'Room service integration, guest profile management, spa scheduling, and seamless property management system sync.',
               icon: Hotel,
               link: '/outlets/hotels-spas',
-              color: 'bg-blue-50 text-blue-600'
+              color: 'bg-blue-50 text-blue-600',
+              image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80'
             },
             {
               title: 'Cafes & Coffee Shops',
               desc: 'Lightning-fast order entry, integrated loyalty programs, and precise ingredient tracking for high-volume cafes.',
               icon: Coffee,
               link: '/outlets/cafes',
-              color: 'bg-amber-50 text-amber-600'
+              color: 'bg-amber-50 text-amber-600',
+              image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80'
             }].
             map((outlet, i) =>
             <Link key={i} to={outlet.link}>
                 <motion.div
-                initial={{
-                  opacity: 0,
-                  scale: 0.95
-                }}
-                whileInView={{
-                  opacity: 1,
-                  scale: 1
-                }}
-                viewport={{
-                  once: true
-                }}
-                transition={{
-                  duration: 0.4
-                }}
-                className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white p-8 hover:shadow-card transition-all h-full flex flex-col sm:flex-row gap-6 items-start">
-                
-                  <div className={`p-4 rounded-2xl ${outlet.color} shrink-0`}>
-                    <outlet.icon className="w-8 h-8" />
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4 }}
+                className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white hover:shadow-card transition-all h-full flex flex-col">
+                  {/* Card image */}
+                  <div className="h-56 overflow-hidden relative">
+                    <img
+                      src={outlet.image}
+                      alt={outlet.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                    <div className={`absolute bottom-4 left-4 p-2.5 rounded-xl ${outlet.color} backdrop-blur-sm`}>
+                      <outlet.icon className="w-5 h-5" />
+                    </div>
                   </div>
-                  <div>
+                  <div className="p-8">
                     <h3 className="text-2xl font-bold font-heading mb-3 group-hover:text-brand-coral transition-colors">
                       {outlet.title}
                     </h3>
@@ -451,7 +419,7 @@ export function Home() {
                     </div>
                     <div className="text-white">
                       "Avocado Toast" sales are up 40% on weekends. Consider
-                      raising price by $1.50 or creating a weekend combo.
+                      raising price by RWF 2,000 or creating a weekend combo.
                     </div>
                   </div>
                 </motion.div>
@@ -537,28 +505,30 @@ export function Home() {
             {
               name: 'Servv Terminal',
               desc: '14" customer-facing display, built-in card reader, and receipt printer.',
-              type: 'Countertop POS'
+              type: 'Countertop POS',
+              image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80'
             },
             {
               name: 'Servv Go',
               desc: 'Handheld POS for tableside ordering and line-busting with tap-to-pay.',
-              type: 'Mobile Device'
+              type: 'Mobile Device',
+              image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80'
             },
             {
               name: 'Servv KDS',
               desc: 'Rugged kitchen display systems built to withstand heat and grease.',
-              type: 'Kitchen Display'
+              type: 'Kitchen Display',
+              image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80'
             }].
             map((hw, i) =>
             <div
               key={i}
               className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group">
-              
-                <div className="h-64 bg-gray-100 flex items-center justify-center p-8">
-                  {/* Abstract hardware representation */}
-                  <div className="w-full h-full bg-white rounded-xl shadow-sm border border-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-500">
-                    <MonitorSmartphone className="w-16 h-16 opacity-50" />
-                  </div>
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={hw.image}
+                    alt={hw.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="p-8">
                   <div className="text-sm font-semibold text-brand-coral mb-2 uppercase tracking-wider">
@@ -581,11 +551,11 @@ export function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
             {
-              number: '10,000+',
+              number: '1,000+',
               label: 'Venues Powered'
             },
             {
-              number: '50M+',
+              number: '5M+',
               label: 'Orders Processed'
             },
             {
@@ -621,24 +591,24 @@ export function Home() {
             {[
             {
               quote:
-              'Switching to Servv was the best decision for our restaurant group. The multi-location management and real-time analytics have completely transformed how we operate.',
-              name: 'Sarah Jenkins',
+                'Switching to Servv was the best decision for our restaurant group. The multi-location management and real-time analytics have completely transformed how we operate.',
+              name: 'Mwangi Njoroge',
               role: 'Operations Director',
-              venue: 'The Rustic Collective'
+              venue: 'Nairobi Eats (Kenya)'
             },
             {
               quote:
-              'The handheld devices have increased our table turn times by 20%. Servers love them, and tips are up because the payment process is so seamless.',
-              name: 'Marcus Chen',
+                'The handheld devices have increased our table turn times by 20%. Servers love them, and tips are up because the payment process is so seamless.',
+              name: 'Aline Uwase',
               role: 'General Manager',
-              venue: 'Elevate Lounge'
+              venue: 'Kigali Bistro (Rwanda)'
             },
             {
               quote:
-              "Servv IQ's inventory predictions have reduced our food waste by almost 15%. It's like having a full-time data analyst on staff.",
-              name: 'Elena Rodriguez',
+                "Servv IQ's inventory predictions have reduced our food waste by almost 15%. It's like having a full-time data analyst on staff.",
+              name: 'Joseph Okello',
               role: 'Executive Chef',
-              venue: 'Bistro 42'
+              venue: 'Jinja Grill (Uganda)'
             }].
             map((testimonial, i) =>
             <div

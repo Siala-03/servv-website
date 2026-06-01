@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -6,9 +5,7 @@ import {
   AlertTriangle,
   Calculator,
   Trash2,
-  CheckCircle2,
-  ArrowRight,
-  BarChart } from
+  CheckCircle2 } from
 'lucide-react';
 export function Inventory() {
   return (
@@ -289,24 +286,24 @@ export function Inventory() {
                   <div className="flex justify-between items-center pb-2 border-b">
                     <span className="text-sm">Beef Patty (8oz)</span>
                     <span className="text-sm font-medium text-gray-500">
-                      $1.50
+                      RWF 1,500
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-2 border-b">
                     <span className="text-sm">Brioche Bun (1)</span>
                     <span className="text-sm font-medium text-gray-500">
-                      $0.40
+                      RWF 400
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-2 border-b">
                     <span className="text-sm">Cheddar Slice (1)</span>
                     <span className="text-sm font-medium text-gray-500">
-                      $0.25
+                      RWF 250
                     </span>
                   </div>
                   <div className="flex justify-between items-center pt-2">
                     <span className="font-bold">Total Cost</span>
-                    <span className="font-bold text-brand-coral">$2.15</span>
+                    <span className="font-bold text-brand-coral">RWF 2,150</span>
                   </div>
                 </div>
               </div>

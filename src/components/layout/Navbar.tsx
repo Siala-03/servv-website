@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -227,11 +227,16 @@ export function Navbar() {
               </AnimatePresence>
             </div>
 
+
             <Link
-              to="/pricing"
+              to="/rms"
               className="text-gray-600 hover:text-brand-coral font-medium transition-colors py-2">
-              
-              Pricing
+              RMS
+            </Link>
+            <Link
+              to="/hms"
+              className="text-gray-600 hover:text-brand-coral font-medium transition-colors py-2">
+              HMS
             </Link>
 
             <Link
@@ -375,13 +380,6 @@ export function Navbar() {
                 }
                 </AnimatePresence>
               </div>
-
-              <Link
-              to="/pricing"
-              className="text-lg font-semibold text-brand-navy">
-              
-                Pricing
-              </Link>
 
               <Link
               to="/servv-iq"

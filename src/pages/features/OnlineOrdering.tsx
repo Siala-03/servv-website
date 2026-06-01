@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -7,7 +6,6 @@ import {
   Truck,
   RefreshCw,
   CheckCircle2,
-  Smartphone,
   Globe } from
 'lucide-react';
 export function OnlineOrdering() {
@@ -94,7 +92,7 @@ export function OnlineOrdering() {
                         <div className="font-semibold text-sm">
                           Avocado Toast
                         </div>
-                        <div className="text-xs text-gray-500 mt-1">$12.00</div>
+                        <div className="text-xs text-gray-500 mt-1">RWF 15,000</div>
                       </div>
                       <div className="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold">
                         +

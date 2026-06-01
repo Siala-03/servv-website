@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Instagram, Facebook } from 'lucide-react';
 export function Footer() {
@@ -17,9 +16,14 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-brand-gray/70 mb-8 max-w-sm text-lg">
-              The all-in-one POS and management platform built to grow your
-              hospitality business.
+              Servv is a trading name of Siala Solutions, the leading provider of IT solutions for the hospitality industry in Africa. We offer restaurant and hotel management systems, digital marketing, website development, and custom software/app development.
             </p>
+            <div className="mb-8 text-brand-gray/70 text-base">
+              <div><strong>Contact:</strong></div>
+              <div>Email: sialasolutions@gmail.com</div>
+              <div>Phone: +0783809328</div>
+              <div>Address: 42 KG 40 Street, Ijuru Hub Coworking Space</div>
+            </div>
             <div className="flex items-center gap-4">
               <a
                 href="#"
@@ -94,10 +98,16 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/pricing"
+                  to="/rms"
                   className="text-brand-gray/70 hover:text-white transition-colors">
-                  
-                  Pricing
+                  RMS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/hms"
+                  className="text-brand-gray/70 hover:text-white transition-colors">
+                  HMS
                 </Link>
               </li>
             </ul>
@@ -194,8 +204,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-brand-gray/50 text-sm">
-            © {new Date().getFullYear()} Servv Technologies Inc. All rights
-            reserved.
+            © {new Date().getFullYear()} Siala Solutions. Servv is a trading name of Siala Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
             <Link

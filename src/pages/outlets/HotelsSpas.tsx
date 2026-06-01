@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -109,7 +108,7 @@ export function HotelsSpas() {
                             Oct 12, 8:45 PM
                           </div>
                         </div>
-                        <div className="font-bold">$42.50</div>
+                        <div className="font-bold">RWF 55,000</div>
                       </div>
                       <div className="p-3 bg-gray-50 rounded-lg flex justify-between items-center">
                         <div>
@@ -120,7 +119,7 @@ export function HotelsSpas() {
                             Oct 13, 7:30 AM
                           </div>
                         </div>
-                        <div className="font-bold">$38.00</div>
+                        <div className="font-bold">RWF 49,000</div>
                       </div>
                       <div className="p-3 bg-blue-50 border border-blue-100 rounded-lg flex justify-between items-center">
                         <div>
@@ -131,7 +130,7 @@ export function HotelsSpas() {
                             Today, 2:00 PM
                           </div>
                         </div>
-                        <div className="font-bold text-blue-800">$150.00</div>
+                        <div className="font-bold text-blue-800">RWF 195,000</div>
                       </div>
                     </div>
                   </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -91,7 +90,7 @@ export function Analytics() {
                         Net Sales
                       </div>
                       <div className="text-2xl font-bold text-brand-navy">
-                        $4,250
+                        RWF 4,250,000
                       </div>
                       <div className="text-sm text-green-600 font-medium mt-1">
                         +12.5%
@@ -111,7 +110,7 @@ export function Analytics() {
                         Avg Ticket
                       </div>
                       <div className="text-2xl font-bold text-brand-navy">
-                        $29.92
+                        RWF 29,920
                       </div>
                       <div className="text-sm text-green-600 font-medium mt-1">
                         +6.8%

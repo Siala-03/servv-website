@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -110,17 +109,17 @@ export function BarsLounges() {
                     <div className="flex-grow p-3 flex flex-col gap-2 text-sm">
                       <div className="flex justify-between">
                         <span>2x IPA Draft</span>
-                        <span>$12.00</span>
+                        <span>RWF 15,000</span>
                       </div>
                       <div className="flex justify-between">
                         <span>1x Tito's Soda</span>
-                        <span>$9.00</span>
+                        <span>RWF 11,500</span>
                       </div>
                     </div>
                     <div className="p-3 border-t border-gray-800">
                       <div className="flex justify-between font-bold text-lg mb-2">
                         <span>Total</span>
-                        <span>$21.00</span>
+                        <span>RWF 27,000</span>
                       </div>
                       <div className="w-full py-3 bg-green-600 rounded text-center font-bold">
                         CLOSE TAB

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -7,10 +6,7 @@ import {
   Zap,
   MessageSquare,
   ArrowRight,
-  CheckCircle2,
-  BarChart3,
-  Clock,
-  AlertTriangle } from
+  CheckCircle2 } from
 'lucide-react';
 export function ServvIQ() {
   return (
@@ -170,7 +166,7 @@ export function ServvIQ() {
                       Recommendation
                     </div>
                     <div className="font-bold">
-                      Increase price from $8.00 to $9.50
+                      Increase price from RWF 10,000 to RWF 12,500
                     </div>
                   </div>
                   <button className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-lg transition-colors text-sm">
@@ -372,7 +368,7 @@ export function ServvIQ() {
                     </div>
                     <div className="bg-brand-teal/20 border border-brand-teal/30 p-3 rounded-2xl rounded-tr-none text-sm text-white max-w-[80%]">
                       Last Friday between 5PM-11PM, your best selling item was
-                      the <strong>Spicy Margarita</strong> (142 sold, $1,704
+                      the <strong>Spicy Margarita</strong> (142 sold, RWF 2,100,000
                       revenue). This is 22% higher than your average Friday.
                     </div>
                   </div>
@@ -471,8 +467,7 @@ export function ServvIQ() {
       {/* PRICING NOTE */}
       <section className="py-16 text-center">
         <p className="text-gray-400">
-          Servv IQ is included in the Enterprise plan. Available as an add-on
-          for Professional plan at $49/mo. <br />
+          Servv IQ is included in the Enterprise plan. Available as an add-on — contact us for RWF pricing. <br />
           <Link
             to="/pricing"
             className="text-brand-teal hover:underline mt-2 inline-block">

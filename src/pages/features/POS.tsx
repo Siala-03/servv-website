@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -7,7 +6,6 @@ import {
   WifiOff,
   Settings2,
   CheckCircle2,
-  ArrowRight,
   MonitorSmartphone,
   Smartphone,
   Tablet } from
@@ -284,11 +282,11 @@ export function POS() {
                 <div className="space-y-2 mb-4">
                   <div className="flex justify-between text-sm">
                     <span className="font-medium">Burger</span>
-                    <span>$15.00</span>
+                    <span>RWF 15,000</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span className="font-medium">IPA Beer</span>
-                    <span>$8.00</span>
+                    <span>RWF 8,000</span>
                   </div>
                 </div>
                 <div className="w-full h-10 bg-brand-navy rounded-lg"></div>

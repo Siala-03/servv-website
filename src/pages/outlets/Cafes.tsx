@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
@@ -86,19 +85,19 @@ export function Cafes() {
                       <div className="font-bold text-lg text-amber-800">
                         Latte
                       </div>
-                      <div className="text-sm text-amber-600">$4.50</div>
+                      <div className="text-sm text-amber-600">RWF 6,000</div>
                     </div>
                     <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer">
                       <div className="font-bold text-lg">Cappuccino</div>
-                      <div className="text-sm text-gray-500">$4.50</div>
+                      <div className="text-sm text-gray-500">RWF 6,000</div>
                     </div>
                     <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer">
                       <div className="font-bold text-lg">Americano</div>
-                      <div className="text-sm text-gray-500">$3.50</div>
+                      <div className="text-sm text-gray-500">RWF 4,500</div>
                     </div>
                     <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 flex flex-col items-center justify-center text-center cursor-pointer">
                       <div className="font-bold text-lg">Cold Brew</div>
-                      <div className="text-sm text-gray-500">$5.00</div>
+                      <div className="text-sm text-gray-500">RWF 6,500</div>
                     </div>
                   </div>
                   <div className="w-1/3 bg-gray-50 rounded-xl border border-gray-200 flex flex-col">
@@ -107,13 +106,13 @@ export function Cafes() {
                     </div>
                     <div className="flex-grow p-2 space-y-2">
                       <div className="bg-white p-2 rounded border border-amber-500 text-sm font-bold text-amber-700">
-                        Oat Milk (+$0.75)
+                        Oat Milk (+RWF 1,000)
                       </div>
                       <div className="bg-white p-2 rounded border border-gray-200 text-sm">
                         Almond Milk
                       </div>
                       <div className="bg-white p-2 rounded border border-amber-500 text-sm font-bold text-amber-700">
-                        Vanilla Syrup (+$0.50)
+                        Vanilla Syrup (+RWF 700)
                       </div>
                     </div>
                   </div>
