@@ -1,365 +1,123 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  ShoppingBag,
-  Store,
-  Truck,
-  RefreshCw,
-  CheckCircle2,
-  Globe } from
-'lucide-react';
+import { Globe, Smartphone, RefreshCw, BadgeDollarSign, CheckCircle2, ArrowRight } from 'lucide-react';
+
 export function OnlineOrdering() {
   return (
     <div className="w-full">
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              transition={{
-                duration: 0.6
-              }}
-              className="max-w-2xl">
-              
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold mb-6">
-                <ShoppingBag className="w-5 h-5" /> Online Ordering
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Online Ordering, <br />
-                <span className="text-purple-600">Your Way</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Accept orders directly from your branded website or integrate
-                with UberEats, DoorDash, and more — all flowing into one unified
-                system.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg shadow-soft">
-                  
-                  Start Free Trial
-                </Link>
-                <Link
-                  to="/contact"
-                  className="bg-white hover:bg-gray-50 text-brand-navy border border-gray-200 font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg">
-                  
-                  Request Demo
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Hero Mockup */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2
-              }}
-              className="relative h-[500px] w-full hidden lg:block">
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[550px] bg-white rounded-[2.5rem] shadow-2xl border-8 border-gray-900 overflow-hidden flex flex-col">
-                {/* Mobile App Mockup */}
-                <div className="h-48 bg-purple-600 p-6 text-white flex flex-col justify-end relative">
-                  <div className="absolute top-4 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-3xl"></div>
-                  <h3 className="text-2xl font-bold mb-1">The Rustic Cafe</h3>
-                  <p className="text-sm opacity-80">Pickup in 15-20 mins</p>
-                </div>
-                <div className="flex-grow bg-gray-50 p-4 space-y-4 overflow-hidden">
-                  <div className="font-bold text-gray-800">Popular Items</div>
-                  {[1, 2, 3].map((i) =>
-                  <div
-                    key={i}
-                    className="bg-white p-3 rounded-xl shadow-sm flex gap-3">
-                    
-                      <div className="w-16 h-16 bg-gray-200 rounded-lg shrink-0"></div>
-                      <div className="flex-grow">
-                        <div className="font-semibold text-sm">
-                          Avocado Toast
-                        </div>
-                        <div className="text-xs text-gray-500 mt-1">RWF 15,000</div>
-                      </div>
-                      <div className="w-8 h-8 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold">
-                        +
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1920&q=80" alt="Online food ordering" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/40" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-purple-300 font-semibold text-sm mb-6">
+              <Globe className="w-4 h-4" /> Online Ordering
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-extrabold font-heading text-white leading-[1.08] mb-6">
+              Own Your<br /><span className="text-purple-400">Online Orders.</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-10 max-w-lg">Branded ordering. Delivery app aggregation. Zero commissions on direct orders.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact" className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-lg text-center">Start Free Trial</Link>
+              <Link to="/contact" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg border border-white/20 text-center">Request Demo</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* KEY BENEFITS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              Grow your off-premise revenue
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-16">Every Order, One Dashboard</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-            {
-              icon: Store,
-              title: 'Branded Ordering',
-              desc: 'Your own commission-free online storefront matching your brand.'
-            },
-            {
-              icon: Truck,
-              title: 'Delivery Apps',
-              desc: 'Integrate major delivery platforms directly into your POS.'
-            },
-            {
-              icon: RefreshCw,
-              title: 'Real-Time Sync',
-              desc: 'Menu updates and 86s sync instantly across all platforms.'
-            },
-            {
-              icon: Globe,
-              title: 'No Commissions',
-              desc: 'Keep 100% of the profits from orders placed on your direct site.'
-            }].
-            map((benefit, i) =>
-            <motion.div
-              key={i}
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true
-              }}
-              transition={{
-                delay: i * 0.1
-              }}
-              className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
-              
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center text-purple-600 mb-4 shadow-sm">
-                  <benefit.icon className="w-6 h-6" />
+              { icon: Globe, title: 'Branded Site', desc: 'Your brand, your data, your revenue.', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80' },
+              { icon: Smartphone, title: 'Delivery Apps', desc: 'UberEats, Glovo & more in one place.', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80' },
+              { icon: RefreshCw, title: 'Real-Time Sync', desc: 'Orders flow straight to POS & kitchen.', image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80' },
+              { icon: BadgeDollarSign, title: 'Zero Commission', desc: 'Keep 100% on direct orders.', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80' },
+            ].map((b, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all">
+                <div className="h-40 overflow-hidden"><img src={b.image} alt={b.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
+                <div className="p-5">
+                  <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-purple-50 text-purple-600"><b.icon className="w-5 h-5" /></div>
+                  <h3 className="font-bold font-heading text-brand-navy mb-1">{b.title}</h3>
+                  <p className="text-gray-500 text-sm">{b.desc}</p>
                 </div>
-                <h3 className="text-xl font-bold font-heading mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-600">{benefit.desc}</p>
               </motion.div>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
       <section className="py-24 bg-brand-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading mb-4">
-              How it works
-            </h2>
-          </div>
+          <h2 className="text-3xl font-bold font-heading text-center mb-16">How It Works</h2>
           <div className="grid md:grid-cols-3 gap-12 relative">
-            <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-0.5 bg-white/10"></div>
+            <div className="hidden md:block absolute top-8 left-[15%] right-[15%] h-0.5 bg-white/10" />
             {[
-            {
-              step: '1',
-              title: 'Publish your menu',
-              desc: 'Select which items to offer online and set specific online pricing.'
-            },
-            {
-              step: '2',
-              title: 'Customers order',
-              desc: 'Guests order via your website or third-party delivery apps.'
-            },
-            {
-              step: '3',
-              title: 'Straight to kitchen',
-              desc: 'Orders bypass the counter and print directly in the kitchen.'
-            }].
-            map((item, i) =>
-            <div
-              key={i}
-              className="relative z-10 flex flex-col items-center text-center">
-              
-                <div className="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center text-white text-2xl font-bold mb-6 border-4 border-brand-navy">
-                  {item.step}
-                </div>
-                <h3 className="text-xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-400">{item.desc}</p>
+              { step: '1', title: 'Connect', desc: 'Link delivery apps or launch your branded site.' },
+              { step: '2', title: 'Receive', desc: 'All orders appear in your POS automatically.' },
+              { step: '3', title: 'Fulfill', desc: 'Kitchen gets the ticket. Customer gets the food.' },
+            ].map((s, i) => (
+              <div key={i} className="relative z-10 flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full bg-purple-500 flex items-center justify-center text-white text-2xl font-bold mb-6 border-4 border-brand-navy">{s.step}</div>
+                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
+                <p className="text-gray-400 text-sm">{s.desc}</p>
               </div>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FEATURE DETAILS */}
       <section className="py-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
-          {/* Detail 1 */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: -20
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0
-              }}
-              viewport={{
-                once: true
-              }}>
-              
-              <h3 className="text-3xl font-bold font-heading text-brand-navy mb-6">
-                Your own branded ordering site
-              </h3>
-              <p className="text-lg text-gray-600 mb-6">
-                Stop paying 30% commissions. Give your loyal customers a
-                beautiful, easy way to order directly from you.
-              </p>
-              <ul className="space-y-4">
-                {[
-                'Customizable colors and logos',
-                'Mobile-optimized experience',
-                'Accept credit cards and Apple/Google Pay',
-                'Loyalty program integration'].
-                map((item, i) =>
-                <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                )}
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <h3 className="text-3xl font-bold font-heading text-brand-navy mb-4">Your Brand, Your Channel</h3>
+              <p className="text-gray-600 mb-6">Launch a custom ordering site in minutes. No commissions, no middlemen.</p>
+              <ul className="space-y-3">
+                {['Custom branding & domain', 'Built-in loyalty rewards', 'Promo codes & discounts', 'Customer data you own'].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-purple-500 shrink-0 mt-0.5" /><span className="text-gray-700 text-sm">{item}</span></li>
+                ))}
               </ul>
             </motion.div>
-            <div className="relative h-[400px] bg-gray-100 rounded-2xl border border-gray-200 p-8 flex items-center justify-center">
-              <div className="w-full max-w-md bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden">
-                <div className="bg-gray-800 p-3 flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                </div>
-                <div className="p-6 text-center border-b">
-                  <div className="text-2xl font-bold text-purple-600 mb-2">
-                    Order Online
-                  </div>
-                  <div className="flex justify-center gap-4 text-sm font-medium">
-                    <span className="text-purple-600 border-b-2 border-purple-600 pb-1">
-                      Pickup
-                    </span>
-                    <span className="text-gray-500">Delivery</span>
-                  </div>
-                </div>
-                <div className="p-6 bg-gray-50 h-48 flex items-center justify-center text-gray-400">
-                  [Menu Grid Interface]
-                </div>
-              </div>
-            </div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Food delivery" className="rounded-2xl shadow-card" />
+            </motion.div>
           </div>
-
-          {/* Detail 2 */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 relative h-[400px] bg-gray-100 rounded-2xl border border-gray-200 p-8 flex items-center justify-center">
-              <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center font-bold text-green-600">
-                  UberEats
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center font-bold text-red-600">
-                  DoorDash
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center font-bold text-orange-500">
-                  Grubhub
-                </div>
-                <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-100 text-center font-bold text-blue-500">
-                  Postmates
-                </div>
-              </div>
-            </div>
-            <motion.div
-              className="order-1 lg:order-2"
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0
-              }}
-              viewport={{
-                once: true
-              }}>
-              
-              <h3 className="text-3xl font-bold font-heading text-brand-navy mb-6">
-                Third-party delivery aggregation
-              </h3>
-              <p className="text-lg text-gray-600 mb-6">
-                Ditch the tablet farm. All your third-party delivery orders flow
-                directly into your POS and kitchen display system.
-              </p>
-              <ul className="space-y-4">
-                {[
-                'Manage all delivery apps from one screen',
-                'Centralized menu management',
-                'Order throttling during busy times',
-                'Consolidated reporting'].
-                map((item, i) =>
-                <li key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-brand-teal shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                )}
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Food prep" className="rounded-2xl shadow-card" />
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
+              <h3 className="text-3xl font-bold font-heading text-brand-navy mb-4">All Apps, One Screen</h3>
+              <p className="text-gray-600 mb-6">UberEats, Glovo, Bolt Food — every order lands in the same queue.</p>
+              <ul className="space-y-3">
+                {['Unified order dashboard', 'Auto-accept or manual review', 'Menu sync across platforms', 'Real-time delivery tracking'].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3"><CheckCircle2 className="w-5 h-5 text-purple-500 shrink-0 mt-0.5" /><span className="text-gray-700 text-sm">{item}</span></li>
+                ))}
               </ul>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-24 bg-brand-coral relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-            backgroundSize: '30px 30px'
-          }}>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1920&q=80" alt="Ordering" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-coral/90" />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl font-bold font-heading text-white mb-6">
-            Ready to take more orders?
-          </h2>
-          <p className="text-xl text-white/90 mb-10">
-            Set up your online ordering in minutes and start growing your
-            revenue.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-5 py-4 rounded-xl border-none focus:outline-none focus:ring-4 focus:ring-white/30 text-lg" />
-            
-            <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-lg">
-              Start Free Trial
-            </button>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl font-bold font-heading text-white mb-6">Stop Losing Revenue to Commissions</h2>
+          <p className="text-xl text-white/90 mb-10">Launch your branded ordering channel today.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="bg-white text-brand-coral hover:bg-gray-50 font-bold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg">Get Started Free</Link>
+            <Link to="/contact" className="bg-white/10 hover:bg-white/20 text-white font-bold px-10 py-4 rounded-xl transition-colors text-lg border border-white/30">Talk to Sales <ArrowRight className="w-5 h-5 inline-block ml-2" /></Link>
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }

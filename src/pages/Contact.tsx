@@ -231,10 +231,10 @@ export function Contact() {
                   <div>
                     <div className="font-semibold text-brand-navy">Email</div>
                     <a
-                      href="mailto:hello@servv.com"
+                      href="mailto:sialasolutions@gmail.com"
                       className="text-gray-600 hover:text-brand-coral transition-colors">
-                      
-                      hello@servv.com
+
+                      sialasolutions@gmail.com
                     </a>
                   </div>
                 </div>
@@ -245,10 +245,10 @@ export function Contact() {
                   <div>
                     <div className="font-semibold text-brand-navy">Phone</div>
                     <a
-                      href="tel:1-800-SERVV"
+                      href="tel:+250783809328"
                       className="text-gray-600 hover:text-brand-coral transition-colors">
-                      
-                      1-800-SERVV
+
+                      +250 783 809 328
                     </a>
                   </div>
                 </div>
@@ -258,7 +258,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="font-semibold text-brand-navy">Office</div>
-                    <div className="text-gray-600">San Francisco, CA</div>
+                    <div className="text-gray-600">42 KG 40 St, Ijuru Hub<br />Kigali, Rwanda</div>
                   </div>
                 </div>
               </div>

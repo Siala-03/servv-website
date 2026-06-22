@@ -16,13 +16,12 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-brand-gray/70 mb-8 max-w-sm text-lg">
-              Servv is a trading name of Siala Solutions, the leading provider of IT solutions for the hospitality industry in Africa. We offer restaurant and hotel management systems, digital marketing, website development, and custom software/app development.
+              Africa's leading hospitality IT partner. Restaurant &amp; hotel management, digital marketing, and custom software — all in one.
             </p>
-            <div className="mb-8 text-brand-gray/70 text-base">
-              <div><strong>Contact:</strong></div>
-              <div>Email: sialasolutions@gmail.com</div>
-              <div>Phone: +0783809328</div>
-              <div>Address: 42 KG 40 Street, Ijuru Hub Coworking Space</div>
+            <div className="mb-8 text-brand-gray/70 text-sm space-y-1">
+              <div>sialasolutions@gmail.com</div>
+              <div>+250 783 809 328</div>
+              <div>42 KG 40 St, Ijuru Hub, Kigali, Rwanda</div>
             </div>
             <div className="flex items-center gap-4">
               <a

@@ -1,483 +1,553 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
-  Package,
-  ShoppingBag,
-  BarChart3,
-  Users,
+  ArrowRight,
+  CheckCircle2,
+  Star,
+  Quote,
+  Zap,
+  Shield,
+  TrendingUp,
+  Smartphone,
+  Monitor,
+  ChefHat,
   UtensilsCrossed,
   Wine,
   Hotel,
   Coffee,
   BrainCircuit,
-  ArrowRight,
-  CheckCircle2,
-  Star,
-  Quote } from
-'lucide-react';
+  Users,
+  Package,
+  BarChart3,
+  ShoppingBag,
+  Wifi,
+  Globe,
+  Headphones,
+} from 'lucide-react';
+
 export function Home() {
   return (
     <div className="w-full">
       {/* HERO SECTION */}
-      <section className="relative pt-20 pb-32 overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
+            alt="Restaurant ambiance"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/40" />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              transition={{
-                duration: 0.6
-              }}
-              className="max-w-2xl">
-              
-              <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Africa’s Hospitality IT Partner<br />
-                <span className="text-brand-coral">Servv: All-in-One Solutions</span>
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              className="max-w-xl"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-teal font-semibold text-sm mb-6 backdrop-blur-sm">
+                <Zap className="w-4 h-4" /> Africa's #1 Hospitality Tech Partner
+              </div>
+
+              <h1 className="text-5xl lg:text-7xl font-extrabold font-heading text-white leading-[1.05] mb-6">
+                Run Your Venue
+                <br />
+                <span className="text-brand-coral">Smarter.</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Servv provides comprehensive IT solutions for the hospitality industry in Africa. From restaurant and hotel management systems (RMS & HMS) to digital marketing, website development, and custom software/app development, we empower your business to thrive in a digital world.
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed max-w-lg">
+                POS. Hotel management. Online ordering. Analytics. AI insights.
+                <span className="text-white font-medium"> One platform.</span>
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 max-w-md">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="flex-grow px-5 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brand-coral/50 focus:border-brand-coral transition-all text-lg" />
-                
-                <button className="bg-brand-coral hover:bg-brand-coral-dark text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-soft">
-                  Sign Up Free
-                </button>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/contact"
+                  className="bg-brand-coral hover:bg-brand-coral-dark text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg shadow-lg text-center"
+                >
+                  Get a Free Demo
+                </Link>
+                <Link
+                  to="/rms"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg border border-white/20 text-center"
+                >
+                  Explore Solutions
+                </Link>
               </div>
-              <p className="text-sm text-gray-500 mt-4 flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-brand-teal" /> No credit
-                card required. 14-day free trial.
-              </p>
+
+              <div className="flex items-center gap-6 mt-8 text-sm text-gray-400">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal" /> No credit card
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal" /> 14-day free trial
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal" /> Setup in 72 hrs
+                </span>
+              </div>
             </motion.div>
 
-            {/* Hero Mockup Area */}
             <motion.div
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2
-              }}
-              className="relative h-[500px] lg:h-[600px] w-full hidden md:block">
-              
-              {/* Main POS Interface Mockup */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] max-w-[700px] aspect-[4/3] bg-white rounded-2xl shadow-card border border-gray-100 overflow-hidden flex flex-col">
-                {/* Header */}
-                <div className="h-14 border-b border-gray-100 flex items-center justify-between px-6 bg-gray-50">
-                  <div className="flex gap-4">
-                    <div className="w-20 h-6 bg-gray-200 rounded-md"></div>
-                    <div className="w-20 h-6 bg-brand-coral/20 rounded-md"></div>
-                    <div className="w-20 h-6 bg-gray-200 rounded-md"></div>
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="hidden lg:block relative"
+            >
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+                  alt="Modern restaurant interior"
+                  className="rounded-2xl shadow-2xl border-2 border-white/10"
+                />
+                <motion.div
+                  animate={{ y: [0, -8, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
+                  className="absolute -left-6 top-8 bg-white p-4 rounded-xl shadow-card flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-green-600" />
                   </div>
-                  <div className="w-32 h-8 bg-brand-navy rounded-md"></div>
-                </div>
-                {/* Body */}
-                <div className="flex-grow flex p-4 gap-4 bg-gray-50/50">
-                  {/* Left Menu Grid */}
-                  <div className="flex-grow grid grid-cols-3 gap-3">
-                    {[...Array(9)].map((_, i) =>
-                    <div
-                      key={i}
-                      className="bg-white rounded-xl border border-gray-100 p-3 flex flex-col justify-between shadow-sm">
-                      
-                        <div className="w-12 h-12 bg-gray-100 rounded-lg mb-2"></div>
-                        <div>
-                          <div className="w-full h-3 bg-gray-200 rounded-full mb-1"></div>
-                          <div className="w-1/2 h-3 bg-gray-200 rounded-full"></div>
-                        </div>
-                      </div>
-                    )}
+                  <div>
+                    <div className="text-xs text-gray-500">Daily Revenue</div>
+                    <div className="text-lg font-bold text-brand-navy">RWF 4.2M</div>
                   </div>
-                  {/* Right Order Ticket */}
-                  <div className="w-72 bg-white rounded-xl border border-gray-100 shadow-sm flex flex-col">
-                    <div className="p-4 border-b border-gray-100 font-semibold text-brand-navy">
-                      Current Order #1042
-                    </div>
-                    <div className="flex-grow p-4 flex flex-col gap-3">
-                      {[...Array(4)].map((_, i) =>
-                      <div
-                        key={i}
-                        className="flex justify-between items-center">
-                        
-                          <div className="flex gap-2 items-center">
-                            <div className="w-6 h-6 bg-gray-100 rounded flex items-center justify-center text-xs">
-                              1
-                            </div>
-                            <div className="w-24 h-3 bg-gray-200 rounded-full"></div>
-                          </div>
-                          <div className="w-10 h-3 bg-gray-200 rounded-full"></div>
-                        </div>
-                      )}
-                    </div>
-                    <div className="p-4 border-t border-gray-100 bg-gray-50 rounded-b-xl">
-                      <div className="flex justify-between font-bold text-lg mb-4">
-                        <span>Total</span>
-                        <span>RWF 42,500</span>
-                      </div>
-                      <div className="w-full h-12 bg-brand-coral rounded-lg"></div>
-                    </div>
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [0, 8, 0] }}
+                  transition={{ repeat: Infinity, duration: 5, ease: 'easeInOut', delay: 1 }}
+                  className="absolute -right-6 bottom-12 bg-white p-4 rounded-xl shadow-card flex items-center gap-3"
+                >
+                  <div className="w-10 h-10 bg-brand-coral/10 rounded-full flex items-center justify-center">
+                    <ShoppingBag className="w-5 h-5 text-brand-coral" />
                   </div>
-                </div>
+                  <div>
+                    <div className="text-xs text-gray-500">New Order</div>
+                    <div className="text-sm font-bold text-brand-navy">UberEats #882</div>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  animate={{ y: [0, -6, 0] }}
+                  transition={{ repeat: Infinity, duration: 3.5, ease: 'easeInOut', delay: 2 }}
+                  className="absolute -right-4 top-6 bg-white p-3 rounded-xl shadow-card flex items-center gap-3"
+                >
+                  <div className="w-9 h-9 bg-brand-teal/10 rounded-full flex items-center justify-center">
+                    <BarChart3 className="w-4 h-4 text-brand-teal" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-500">Occupancy</div>
+                    <div className="text-sm font-bold text-brand-navy">84%</div>
+                  </div>
+                </motion.div>
               </div>
-
-              {/* Floating Elements */}
-              <motion.div
-                animate={{
-                  y: [0, -10, 0]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 4,
-                  ease: 'easeInOut'
-                }}
-                className="absolute -left-8 top-20 bg-white p-4 rounded-xl shadow-card border border-gray-100 flex items-center gap-4">
-                
-                <div className="w-12 h-12 bg-brand-teal/10 rounded-full flex items-center justify-center text-brand-teal">
-                  <BarChart3 className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500 font-medium">
-                    Daily Revenue
-                  </div>
-                  <div className="text-xl font-bold text-brand-navy">
-                    RWF 4,250,000
-                  </div>
-                </div>
-              </motion.div>
-
-              <motion.div
-                animate={{
-                  y: [0, 10, 0]
-                }}
-                transition={{
-                  repeat: Infinity,
-                  duration: 5,
-                  ease: 'easeInOut',
-                  delay: 1
-                }}
-                className="absolute -right-4 bottom-32 bg-white p-4 rounded-xl shadow-card border border-gray-100 flex items-center gap-4">
-                
-                <div className="w-12 h-12 bg-brand-coral/10 rounded-full flex items-center justify-center text-brand-coral">
-                  <ShoppingBag className="w-6 h-6" />
-                </div>
-                <div>
-                  <div className="text-sm text-gray-500 font-medium">
-                    New Online Order
-                  </div>
-                  <div className="text-sm font-bold text-brand-navy">
-                    UberEats - #882
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>
-
-        {/* Background decorative elements */}
-        <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-brand-coral/5 rounded-full blur-3xl -z-10"></div>
-        <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-brand-teal/5 rounded-full blur-3xl -z-10"></div>
       </section>
 
-      {/* SOLUTIONS OVERVIEW SECTION */}
+      {/* TRUSTED BY / STATS STRIP */}
+      <section className="py-12 bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { number: '1,000+', label: 'Venues Powered', icon: Globe },
+              { number: '5M+', label: 'Orders Processed', icon: ShoppingBag },
+              { number: '99.9%', label: 'System Uptime', icon: Shield },
+              { number: '30%', label: 'Avg. Revenue Boost', icon: TrendingUp },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-12 h-12 mx-auto mb-3 bg-brand-coral/10 rounded-xl flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-brand-coral" />
+                </div>
+                <div className="text-3xl md:text-4xl font-bold font-heading text-brand-navy">
+                  {stat.number}
+                </div>
+                <div className="text-gray-500 font-medium text-sm mt-1">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SOLUTIONS VISUAL SECTION */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
-              IT Solutions for Hospitality
+              One Ecosystem. Every Tool.
             </h2>
-            <p className="text-xl text-gray-600">
-              Restaurant & Hotel Management (RMS & HMS), Digital Marketing, Website Development, and Custom Software/App Development—all tailored for Africa’s hospitality industry.
+            <p className="text-lg text-gray-600">
+              From front-of-house to back office — built for African hospitality.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* RMS Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
-              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
-                RMS
-              </div>
-              <h3 className="text-2xl font-bold font-heading mb-3">Servv RMS</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Restaurant Management System: POS, inventory, staff, and table management, online ordering, and analytics—all in one platform.
-              </p>
-              <Link to="/rms" className="inline-flex items-center font-semibold text-brand-coral hover:text-brand-coral-dark transition-colors">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+            >
+              <Link to="/rms" className="group block h-full">
+                <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all border border-gray-100">
+                  <div className="h-52 overflow-hidden relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=800&q=80"
+                      alt="Restaurant management"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-4 bg-brand-coral text-white text-sm font-bold px-3 py-1.5 rounded-lg">
+                      RMS
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold font-heading mb-2 group-hover:text-brand-coral transition-colors">
+                      Restaurant Management
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      POS, inventory, staff scheduling, online ordering & analytics in one platform.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {['POS', 'Inventory', 'Orders', 'Analytics'].map((tag) => (
+                        <span key={tag} className="text-xs bg-brand-gray px-2.5 py-1 rounded-full text-gray-600 font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </Link>
             </motion.div>
+
+            {/* HMS Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
-              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
-                HMS
-              </div>
-              <h3 className="text-2xl font-bold font-heading mb-3">Servv HMS</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Hotel Management System: Guest management, room service, spa scheduling, and property management for hotels and spas.
-              </p>
-              <Link to="/hms" className="inline-flex items-center font-semibold text-brand-coral hover:text-brand-coral-dark transition-colors">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+            >
+              <Link to="/hms" className="group block h-full">
+                <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all border border-gray-100">
+                  <div className="h-52 overflow-hidden relative">
+                    <img
+                      src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+                      alt="Hotel management"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    <div className="absolute bottom-4 left-4 bg-brand-teal text-white text-sm font-bold px-3 py-1.5 rounded-lg">
+                      HMS
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold font-heading mb-2 group-hover:text-brand-coral transition-colors">
+                      Hotel & Spa Management
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      Reservations, housekeeping, guest profiles, billing & mobile check-in.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {['Front Desk', 'Housekeeping', 'Billing', 'Check-in'].map((tag) => (
+                        <span key={tag} className="text-xs bg-brand-gray px-2.5 py-1 rounded-full text-gray-600 font-medium">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </Link>
             </motion.div>
+
+            {/* Digital Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white p-8 rounded-2xl shadow-soft hover:shadow-card transition-all group border border-gray-100">
-              <div className="w-14 h-14 bg-brand-gray rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-coral group-hover:text-white transition-colors text-brand-navy">
-                <span className="font-bold">Digital</span>
+            >
+              <div className="relative h-full bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all border border-gray-100 group">
+                <div className="h-52 overflow-hidden relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                    alt="Digital marketing dashboard"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-4 left-4 bg-brand-navy text-white text-sm font-bold px-3 py-1.5 rounded-lg">
+                    Digital
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold font-heading mb-2 group-hover:text-brand-coral transition-colors">
+                    Digital Marketing & Web
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Websites, apps, SEO, social media & custom software for your brand.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['Websites', 'Apps', 'SEO', 'Branding'].map((tag) => (
+                      <span key={tag} className="text-xs bg-brand-gray px-2.5 py-1 rounded-full text-gray-600 font-medium">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h3 className="text-2xl font-bold font-heading mb-3">Digital Marketing & Web</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Boost your brand with digital marketing, website development, and custom software/app solutions designed for hospitality businesses.
-              </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* OUTLET TYPES SECTION */}
+      {/* OUTLET TYPES — FULL-BLEED IMAGE CARDS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
-              Built for every hospitality venue
+              Your Venue. Your Workflow.
             </h2>
-            <p className="text-xl text-gray-600">
-              Tailored workflows and features designed specifically for how your
-              business operates.
+            <p className="text-lg text-gray-600">
+              Tailored for how your business actually runs.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-            {
-              title: 'Restaurants',
-              desc: 'Full-service and quick-service restaurant management. Handle complex modifiers, coursing, and split checks with ease.',
-              icon: UtensilsCrossed,
-              link: '/outlets/restaurants',
-              color: 'bg-orange-50 text-orange-600',
-              image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80'
-            },
-            {
-              title: 'Bars & Lounges',
-              desc: 'Fast tab management, happy hour pricing automation, and robust inventory controls for nightlife operations.',
-              icon: Wine,
-              link: '/outlets/bars-lounges',
-              color: 'bg-purple-50 text-purple-600',
-              image: 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=800&q=80'
-            },
-            {
-              title: 'Hotels & Spas',
-              desc: 'Room service integration, guest profile management, spa scheduling, and seamless property management system sync.',
-              icon: Hotel,
-              link: '/outlets/hotels-spas',
-              color: 'bg-blue-50 text-blue-600',
-              image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80'
-            },
-            {
-              title: 'Cafes & Coffee Shops',
-              desc: 'Lightning-fast order entry, integrated loyalty programs, and precise ingredient tracking for high-volume cafes.',
-              icon: Coffee,
-              link: '/outlets/cafes',
-              color: 'bg-amber-50 text-amber-600',
-              image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80'
-            }].
-            map((outlet, i) =>
-            <Link key={i} to={outlet.link}>
+              {
+                title: 'Restaurants',
+                desc: 'Full-service & quick-service management with complex modifiers, coursing, and split checks.',
+                icon: UtensilsCrossed,
+                link: '/outlets/restaurants',
+                image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80',
+              },
+              {
+                title: 'Bars & Lounges',
+                desc: 'Fast tabs, happy hour automation, and robust inventory controls for nightlife.',
+                icon: Wine,
+                link: '/outlets/bars-lounges',
+                image: 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=900&q=80',
+              },
+              {
+                title: 'Hotels & Spas',
+                desc: 'Room service, guest profiles, spa scheduling, and property management sync.',
+                icon: Hotel,
+                link: '/outlets/hotels-spas',
+                image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=900&q=80',
+              },
+              {
+                title: 'Cafes & Coffee Shops',
+                desc: 'Lightning-fast entry, loyalty programs, and ingredient tracking for high-volume cafes.',
+                icon: Coffee,
+                link: '/outlets/cafes',
+                image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=80',
+              },
+            ].map((outlet, i) => (
+              <Link key={i} to={outlet.link}>
                 <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="group relative overflow-hidden rounded-3xl border border-gray-100 bg-white hover:shadow-card transition-all h-full flex flex-col">
-                  {/* Card image */}
-                  <div className="h-56 overflow-hidden relative">
-                    <img
-                      src={outlet.image}
-                      alt={outlet.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                    <div className={`absolute bottom-4 left-4 p-2.5 rounded-xl ${outlet.color} backdrop-blur-sm`}>
-                      <outlet.icon className="w-5 h-5" />
+                  initial={{ opacity: 0, scale: 0.97 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  className="group relative h-72 md:h-80 rounded-2xl overflow-hidden"
+                >
+                  <img
+                    src={outlet.image}
+                    alt={outlet.title}
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        <outlet.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white font-heading">
+                        {outlet.title}
+                      </h3>
                     </div>
-                  </div>
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold font-heading mb-3 group-hover:text-brand-coral transition-colors">
-                      {outlet.title}
-                    </h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      {outlet.desc}
-                    </p>
+                    <p className="text-gray-200 text-sm max-w-md">{outlet.desc}</p>
+                    <div className="mt-4 inline-flex items-center text-brand-coral font-semibold text-sm group-hover:gap-3 gap-2 transition-all">
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </div>
                   </div>
                 </motion.div>
               </Link>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SERVV IQ TEASER SECTION */}
+      {/* VISUAL FEATURE HIGHLIGHTS */}
+      <section className="py-24 bg-brand-gray">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
+              Why Venues Choose Servv
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Zap,
+                title: 'Lightning Fast',
+                desc: 'Sub-second transactions during peak hours',
+                color: 'bg-amber-50 text-amber-600',
+                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80',
+              },
+              {
+                icon: Wifi,
+                title: 'Works Offline',
+                desc: 'Never lose a sale, even without internet',
+                color: 'bg-blue-50 text-blue-600',
+                image: 'https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=400&q=80',
+              },
+              {
+                icon: Globe,
+                title: 'Built for Africa',
+                desc: 'Mobile money, local payments, multi-currency',
+                color: 'bg-green-50 text-green-600',
+                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80',
+              },
+              {
+                icon: Headphones,
+                title: '24/7 Support',
+                desc: 'Real humans, any time, any channel',
+                color: 'bg-purple-50 text-purple-600',
+                image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&q=80',
+              },
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all"
+              >
+                <div className="h-40 overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={feature.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center mb-3 ${feature.color}`}>
+                    <feature.icon className="w-5 h-5" />
+                  </div>
+                  <h3 className="font-bold font-heading text-brand-navy mb-1">{feature.title}</h3>
+                  <p className="text-gray-500 text-sm">{feature.desc}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVV IQ TEASER — VISUAL */}
       <section className="py-24 bg-brand-navy text-white relative overflow-hidden">
-        {/* Abstract background shapes */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-teal/20 to-transparent opacity-50"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-coral/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-brand-teal/20 to-transparent opacity-50" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-brand-coral/20 rounded-full blur-3xl" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-teal font-semibold mb-6">
-                <BrainCircuit className="w-5 h-5" /> Introducing Servv IQ
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-brand-teal font-semibold text-sm mb-6">
+                <BrainCircuit className="w-4 h-4" /> AI-Powered
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold font-heading mb-6">
-                Your AI-Powered Business Brain
+                Meet Servv IQ
               </h2>
-              <p className="text-xl text-gray-300 mb-10 leading-relaxed">
-                Servv IQ doesn't just show you data—it understands it. It
-                predicts busy periods, suggests menu optimizations, and
-                automates routine tasks to boost your bottom line.
+              <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-lg">
+                Predicts demand. Optimizes menus. Automates decisions.
+                <span className="text-white font-medium"> You focus on guests.</span>
               </p>
 
-              <div className="space-y-6 mb-10">
+              <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                {
-                  title: 'Smart Insights',
-                  desc: 'Discover hidden trends in your sales data automatically.'
-                },
-                {
-                  title: 'Predictive Analytics',
-                  desc: 'Forecast demand to optimize staffing and inventory.'
-                },
-                {
-                  title: 'Automated Actions',
-                  desc: 'Set up rules to automatically 86 items or adjust pricing.'
-                }].
-                map((item, i) =>
-                <div key={i} className="flex gap-4">
-                    <div className="w-8 h-8 rounded-full bg-brand-teal/20 flex items-center justify-center shrink-0 mt-1">
-                      <CheckCircle2 className="w-5 h-5 text-brand-teal" />
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-bold">{item.title}</h4>
-                      <p className="text-gray-400">{item.desc}</p>
-                    </div>
+                  { value: '25%', label: 'Less Waste' },
+                  { value: '20%', label: 'Revenue Lift' },
+                  { value: '15%', label: 'Labor Saved' },
+                  { value: '3x', label: 'Faster Decisions' },
+                ].map((stat, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-4 text-center">
+                    <div className="text-2xl font-bold text-brand-teal">{stat.value}</div>
+                    <div className="text-sm text-gray-400">{stat.label}</div>
                   </div>
-                )}
+                ))}
               </div>
 
               <Link
                 to="/servv-iq"
-                className="inline-flex items-center bg-brand-teal hover:bg-teal-400 text-brand-navy font-bold px-8 py-4 rounded-xl transition-colors text-lg">
-                
+                className="inline-flex items-center bg-brand-teal hover:bg-teal-400 text-brand-navy font-bold px-8 py-4 rounded-xl transition-colors text-lg"
+              >
                 Explore Servv IQ <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
 
-            {/* Servv IQ Visual Representation */}
-            <div className="relative h-[500px] bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm flex flex-col justify-center">
-              <div className="space-y-4">
+            <div className="relative">
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-6 backdrop-blur-sm">
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    x: 20
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0
-                  }}
-                  viewport={{
-                    once: true
-                  }}
-                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4">
-                  
-                  <BrainCircuit className="w-6 h-6 text-brand-teal shrink-0 mt-1" />
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4 mb-4"
+                >
+                  <div className="w-10 h-10 bg-brand-teal/20 rounded-lg flex items-center justify-center shrink-0">
+                    <BrainCircuit className="w-5 h-5 text-brand-teal" />
+                  </div>
                   <div>
-                    <div className="text-sm text-brand-teal font-semibold mb-1">
-                      Insight Generated
-                    </div>
-                    <div className="text-white">
-                      "Avocado Toast" sales are up 40% on weekends. Consider
-                      raising price by RWF 2,000 or creating a weekend combo.
+                    <div className="text-sm text-brand-teal font-semibold mb-1">Insight</div>
+                    <div className="text-white text-sm">
+                      "Avocado Toast" sales up 40% on weekends — raise price by RWF 2,000 or create a combo.
                     </div>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    x: 20
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0
-                  }}
-                  viewport={{
-                    once: true
-                  }}
-                  transition={{
-                    delay: 0.2
-                  }}
-                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4 ml-8">
-                  
-                  <Users className="w-6 h-6 text-brand-coral shrink-0 mt-1" />
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4 ml-6 mb-4"
+                >
+                  <div className="w-10 h-10 bg-brand-coral/20 rounded-lg flex items-center justify-center shrink-0">
+                    <Users className="w-5 h-5 text-brand-coral" />
+                  </div>
                   <div>
-                    <div className="text-sm text-brand-coral font-semibold mb-1">
-                      Staffing Alert
-                    </div>
-                    <div className="text-white">
-                      Rain forecast for Friday night. Expected dine-in traffic
-                      down 20%, delivery up 35%. Reallocating 1 server to expo.
+                    <div className="text-sm text-brand-coral font-semibold mb-1">Staff Alert</div>
+                    <div className="text-white text-sm">
+                      Rain Friday night — dine-in down 20%, delivery up 35%. Reallocating 1 server to expo.
                     </div>
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{
-                    opacity: 0,
-                    x: 20
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0
-                  }}
-                  viewport={{
-                    once: true
-                  }}
-                  transition={{
-                    delay: 0.4
-                  }}
-                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4">
-                  
-                  <Package className="w-6 h-6 text-blue-400 shrink-0 mt-1" />
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 }}
+                  className="bg-white/10 p-4 rounded-xl border border-white/10 flex items-start gap-4"
+                >
+                  <div className="w-10 h-10 bg-blue-400/20 rounded-lg flex items-center justify-center shrink-0">
+                    <Package className="w-5 h-5 text-blue-400" />
+                  </div>
                   <div>
-                    <div className="text-sm text-blue-400 font-semibold mb-1">
-                      Inventory Action Taken
-                    </div>
-                    <div className="text-white">
-                      Automatically ordered 2 extra cases of IPA based on
-                      upcoming local sports event predictions.
+                    <div className="text-sm text-blue-400 font-semibold mb-1">Auto-Action</div>
+                    <div className="text-white text-sm">
+                      Ordered 2 extra cases of IPA based on upcoming sports event predictions.
                     </div>
                   </div>
                 </motion.div>
@@ -487,204 +557,185 @@ export function Home() {
         </div>
       </section>
 
-      {/* HARDWARE SECTION */}
-      <section className="py-24 bg-brand-gray">
+      {/* HARDWARE — IMAGE-FORWARD */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
               Purpose-Built Hardware
             </h2>
-            <p className="text-xl text-gray-600">
-              Sleek, durable, and spill-resistant devices designed specifically
-              for the rigorous demands of hospitality environments.
+            <p className="text-lg text-gray-600">
+              Sleek, durable, and spill-resistant — built for hospitality.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-            {
-              name: 'Servv Terminal',
-              desc: '14" customer-facing display, built-in card reader, and receipt printer.',
-              type: 'Countertop POS',
-              image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80'
-            },
-            {
-              name: 'Servv Go',
-              desc: 'Handheld POS for tableside ordering and line-busting with tap-to-pay.',
-              type: 'Mobile Device',
-              image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80'
-            },
-            {
-              name: 'Servv KDS',
-              desc: 'Rugged kitchen display systems built to withstand heat and grease.',
-              type: 'Kitchen Display',
-              image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80'
-            }].
-            map((hw, i) =>
-            <div
-              key={i}
-              className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group">
-                <div className="h-64 overflow-hidden">
+              {
+                name: 'Servv Terminal',
+                type: 'Countertop POS',
+                icon: Monitor,
+                desc: '14" display, built-in card reader & receipt printer.',
+                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+              },
+              {
+                name: 'Servv Go',
+                type: 'Mobile Device',
+                icon: Smartphone,
+                desc: 'Handheld for tableside ordering with tap-to-pay.',
+                image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
+              },
+              {
+                name: 'Servv KDS',
+                type: 'Kitchen Display',
+                icon: ChefHat,
+                desc: 'Rugged displays that handle heat and grease.',
+                image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80',
+              },
+            ].map((hw, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all"
+              >
+                <div className="h-56 overflow-hidden relative">
                   <img
                     src={hw.image}
                     alt={hw.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm p-2 rounded-lg">
+                    <hw.icon className="w-5 h-5 text-brand-navy" />
+                  </div>
                 </div>
-                <div className="p-8">
-                  <div className="text-sm font-semibold text-brand-coral mb-2 uppercase tracking-wider">
+                <div className="p-6">
+                  <div className="text-xs font-bold text-brand-coral uppercase tracking-wider mb-1">
                     {hw.type}
                   </div>
-                  <h3 className="text-2xl font-bold font-heading mb-3">
-                    {hw.name}
-                  </h3>
-                  <p className="text-gray-600">{hw.desc}</p>
+                  <h3 className="text-xl font-bold font-heading mb-2">{hw.name}</h3>
+                  <p className="text-gray-600 text-sm">{hw.desc}</p>
                 </div>
-              </div>
-            )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* STATS SECTION */}
-      <section className="py-20 bg-white border-y border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-            {
-              number: '1,000+',
-              label: 'Venues Powered'
-            },
-            {
-              number: '5M+',
-              label: 'Orders Processed'
-            },
-            {
-              number: '99.9%',
-              label: 'System Uptime'
-            },
-            {
-              number: '30%',
-              label: 'Avg. Revenue Increase'
-            }].
-            map((stat, i) =>
-            <div key={i}>
-                <div className="text-4xl md:text-5xl font-bold font-heading text-brand-navy mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-500 font-medium">{stat.label}</div>
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS SECTION */}
+      {/* TESTIMONIALS — WITH PHOTOS */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold font-heading text-brand-navy mb-4">
-              Loved by hospitality leaders
+              Loved by Hospitality Leaders
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-            {
-              quote:
-                'Switching to Servv was the best decision for our restaurant group. The multi-location management and real-time analytics have completely transformed how we operate.',
-              name: 'Mwangi Njoroge',
-              role: 'Operations Director',
-              venue: 'Nairobi Eats (Kenya)'
-            },
-            {
-              quote:
-                'The handheld devices have increased our table turn times by 20%. Servers love them, and tips are up because the payment process is so seamless.',
-              name: 'Aline Uwase',
-              role: 'General Manager',
-              venue: 'Kigali Bistro (Rwanda)'
-            },
-            {
-              quote:
-                "Servv IQ's inventory predictions have reduced our food waste by almost 15%. It's like having a full-time data analyst on staff.",
-              name: 'Joseph Okello',
-              role: 'Executive Chef',
-              venue: 'Jinja Grill (Uganda)'
-            }].
-            map((testimonial, i) =>
-            <div
-              key={i}
-              className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative">
-              
-                <Quote className="absolute top-6 right-6 w-10 h-10 text-brand-gray-dark" />
-                <div className="flex gap-1 mb-6 text-amber-400">
-                  {[...Array(5)].map((_, j) =>
-                <Star key={j} className="w-5 h-5 fill-current" />
-                )}
+              {
+                quote:
+                  'Multi-location management and real-time analytics completely transformed how we operate.',
+                name: 'Mwangi Njoroge',
+                role: 'Operations Director',
+                venue: 'Nairobi Eats, Kenya',
+                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+              },
+              {
+                quote:
+                  'Handheld devices increased table turns by 20%. Servers love them — tips are up too.',
+                name: 'Aline Uwase',
+                role: 'General Manager',
+                venue: 'Kigali Bistro, Rwanda',
+                avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+              },
+              {
+                quote:
+                  "Servv IQ's inventory predictions cut our food waste by 15%. Like having a data analyst on staff.",
+                name: 'Joseph Okello',
+                role: 'Executive Chef',
+                venue: 'Jinja Grill, Uganda',
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
+              },
+            ].map((testimonial, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                className="bg-white p-8 rounded-2xl shadow-soft border border-gray-100 relative"
+              >
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-brand-gray-dark" />
+                <div className="flex gap-1 mb-4 text-amber-400">
+                  {[...Array(5)].map((_, j) => (
+                    <Star key={j} className="w-4 h-4 fill-current" />
+                  ))}
                 </div>
-                <p className="text-gray-700 text-lg mb-8 relative z-10">
-                  "{testimonial.quote}"
-                </p>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-coral/10 rounded-full flex items-center justify-center text-brand-coral font-bold text-xl">
-                    {testimonial.name.charAt(0)}
-                  </div>
+                <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.quote}"</p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full object-cover"
+                  />
                   <div>
-                    <div className="font-bold text-brand-navy">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-500">
+                    <div className="font-bold text-brand-navy text-sm">{testimonial.name}</div>
+                    <div className="text-xs text-gray-500">
                       {testimonial.role}, {testimonial.venue}
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA SECTION */}
-      <section className="py-24 bg-brand-coral relative overflow-hidden">
-        {/* Background pattern */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-            backgroundSize: '30px 30px'
-          }}>
+      {/* FINAL CTA — IMAGE BACKGROUND */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?auto=format&fit=crop&w=1920&q=80"
+            alt="Restaurant interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-coral/90" />
+          <div
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: 'radial-gradient(#fff 1.5px, transparent 1.5px)',
+              backgroundSize: '24px 24px',
+            }}
+          />
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold font-heading text-white mb-6">
-            Ready to transform your hospitality business?
+            Start Growing Today
           </h2>
           <p className="text-xl text-white/90 mb-10">
-            Join thousands of venues already using Servv to streamline
-            operations and boost revenue.
+            1,000+ venues across Africa already run on Servv.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto mb-6">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-5 py-4 rounded-xl border-none focus:outline-none focus:ring-4 focus:ring-white/30 text-lg" />
-            
-            <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-lg">
-              Get Started
-            </button>
-          </div>
-          <p className="text-white/80">
-            Or{' '}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="underline hover:text-white font-medium">
-              
-              request a personalized demo
-            </Link>{' '}
-            with our team.
-          </p>
+              className="bg-white text-brand-coral hover:bg-gray-50 font-bold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg"
+            >
+              Get a Free Demo
+            </Link>
+            <Link
+              to="/pricing"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold px-10 py-4 rounded-xl transition-colors text-lg border border-white/30"
+            >
+              View Pricing
+            </Link>
+          </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }

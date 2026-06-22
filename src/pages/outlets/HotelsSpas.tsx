@@ -1,304 +1,120 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Hotel,
-  BedDouble,
-  Calendar,
-  UserCheck,
-  CreditCard,
-  LayoutGrid,
-  CheckCircle2,
-  Quote,
-  Star,
-  ArrowRight } from
-'lucide-react';
+import { Hotel, Users, Calendar, CreditCard, Layers, ArrowRight, Star, Quote } from 'lucide-react';
+
 export function HotelsSpas() {
   return (
     <div className="w-full">
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              transition={{
-                duration: 0.6
-              }}
-              className="max-w-2xl">
-              
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-semibold mb-6">
-                <Hotel className="w-5 h-5" /> For Hotels & Spas
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Elevate Your <br />
-                <span className="text-blue-600">Guest Experience</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Seamless room service, spa bookings, restaurant management, and
-                guest billing — all connected to your property management
-                system.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg shadow-soft">
-                  
-                  Start Free Trial
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Hero Mockup */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2
-              }}
-              className="relative h-[500px] w-full hidden lg:block">
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-[4/3] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col">
-                <div className="p-4 border-b border-gray-100 flex justify-between items-center bg-gray-50">
-                  <div className="font-bold text-lg text-brand-navy">
-                    Guest Profile
-                  </div>
-                  <div className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-bold rounded">
-                    Room 412
-                  </div>
-                </div>
-                <div className="flex-grow p-6 flex gap-6">
-                  <div className="w-1/3 border-r border-gray-100 pr-6">
-                    <div className="w-20 h-20 bg-gray-200 rounded-full mb-4"></div>
-                    <div className="font-bold text-xl mb-1">James Wilson</div>
-                    <div className="text-sm text-gray-500 mb-6">
-                      VIP Guest • 3rd Stay
-                    </div>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Check-in</span>
-                        <span className="font-medium">Oct 12</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-500">Check-out</span>
-                        <span className="font-medium">Oct 15</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="w-2/3">
-                    <div className="font-bold mb-4">Folio Charges</div>
-                    <div className="space-y-3">
-                      <div className="p-3 bg-gray-50 rounded-lg flex justify-between items-center">
-                        <div>
-                          <div className="font-medium">Lobby Bar</div>
-                          <div className="text-xs text-gray-500">
-                            Oct 12, 8:45 PM
-                          </div>
-                        </div>
-                        <div className="font-bold">RWF 55,000</div>
-                      </div>
-                      <div className="p-3 bg-gray-50 rounded-lg flex justify-between items-center">
-                        <div>
-                          <div className="font-medium">
-                            Room Service (Breakfast)
-                          </div>
-                          <div className="text-xs text-gray-500">
-                            Oct 13, 7:30 AM
-                          </div>
-                        </div>
-                        <div className="font-bold">RWF 49,000</div>
-                      </div>
-                      <div className="p-3 bg-blue-50 border border-blue-100 rounded-lg flex justify-between items-center">
-                        <div>
-                          <div className="font-medium text-blue-800">
-                            Spa Treatment (Upcoming)
-                          </div>
-                          <div className="text-xs text-blue-600">
-                            Today, 2:00 PM
-                          </div>
-                        </div>
-                        <div className="font-bold text-blue-800">RWF 195,000</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80" alt="Luxury hotel" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/40" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-blue-300 font-semibold text-sm mb-6">
+              <Hotel className="w-4 h-4" /> Hotels & Spas
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-extrabold font-heading text-white leading-[1.08] mb-6">
+              Elevate Every<br /><span className="text-blue-400">Guest Experience.</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-10 max-w-lg">Room service, spa scheduling, guest profiles, and property management — unified in one system.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact" className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-lg text-center">Get a Free Demo</Link>
+              <Link to="/contact" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg border border-white/20 text-center">Start Free Trial</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* PAIN POINTS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              We understand your challenges
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-4">Hotel Challenges, Solved</h2>
+          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">Common property headaches — and how Servv fixes them.</p>
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-            {
-              problem: 'Disconnected systems across departments',
-              solution:
-              'One unified platform for F&B, retail, and spa that talks to your PMS.'
-            },
-            {
-              problem: 'Poor guest experience with slow service',
-              solution:
-              'Mobile ordering for room service and poolside dining.'
-            },
-            {
-              problem: 'Manual booking and scheduling for spa',
-              solution:
-              'Integrated scheduling system tied directly to guest profiles.'
-            },
-            {
-              problem: 'No unified guest profile',
-              solution:
-              'See guest preferences, allergies, and history across all outlets.'
-            }].
-            map((item, i) =>
-            <div
-              key={i}
-              className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex gap-4">
-              
-                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
+              { icon: Layers, problem: 'Disconnected systems', solution: 'PMS, POS, spa, and F&B all in one platform.' },
+              { icon: Users, problem: 'Impersonal guest experience', solution: 'Rich guest profiles track preferences across stays.' },
+              { icon: Calendar, problem: 'Spa scheduling chaos', solution: 'Online booking, therapist calendars, and automated reminders.' },
+              { icon: CreditCard, problem: 'Billing complexity', solution: 'Charge-to-room from any outlet. One folio at checkout.' },
+            ].map((p, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-soft hover:shadow-card transition-all flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center shrink-0">
+                  <p.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-brand-navy mb-2">
-                    {item.problem}
-                  </h4>
-                  <p className="text-gray-600">{item.solution}</p>
+                  <h3 className="font-bold text-brand-navy mb-1">{p.problem}</h3>
+                  <p className="text-gray-600 text-sm">{p.solution}</p>
                 </div>
-              </div>
-            )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* KEY FEATURES */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              Connect your entire property
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-16">Features for Hospitality</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-            {
-              icon: BedDouble,
-              title: 'Room Service Integration',
-              link: '/features/online-ordering'
-            },
-            {
-              icon: Calendar,
-              title: 'Spa Scheduling',
-              link: '/features/table-management'
-            },
-            {
-              icon: UserCheck,
-              title: 'Guest Profiles',
-              link: '/features/pos'
-            },
-            {
-              icon: Hotel,
-              title: 'PMS Integration',
-              link: '/features/pos'
-            },
-            {
-              icon: LayoutGrid,
-              title: 'Multi-Outlet Management',
-              link: '/features/analytics'
-            },
-            {
-              icon: CreditCard,
-              title: 'Charge-to-Room',
-              link: '/features/pos'
-            }].
-            map((feature, i) =>
-            <Link
-              key={i}
-              to={feature.link}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 group">
-              
-                <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                  <feature.icon className="w-6 h-6" />
-                </div>
-                <div className="font-bold text-lg text-brand-navy">
-                  {feature.title}
-                </div>
-                <ArrowRight className="w-5 h-5 ml-auto text-gray-300 group-hover:text-blue-600 transition-colors" />
+              { title: 'Room Service POS', link: '/features/pos', image: 'https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Spa Scheduling', link: '/hms', image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Guest Profiles', link: '/hms', image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80' },
+              { title: 'PMS Integration', link: '/hms', image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Multi-Outlet Billing', link: '/features/pos', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Charge-to-Room', link: '/hms', image: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=400&q=80' },
+            ].map((f, i) => (
+              <Link key={i} to={f.link}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                  className="group relative h-48 rounded-2xl overflow-hidden">
+                  <img src={f.image} alt={f.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-bold font-heading">{f.title}</h3>
+                    <span className="text-blue-300 text-sm font-medium flex items-center gap-1 mt-1">Learn more <ArrowRight className="w-3 h-3" /></span>
+                  </div>
+                </motion.div>
               </Link>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="py-24 bg-brand-navy text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-500/20 to-transparent opacity-50"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Quote className="w-16 h-16 text-blue-500/50 mx-auto mb-8" />
-          <div className="flex justify-center gap-1 mb-8 text-amber-400">
-            {[...Array(5)].map((_, j) =>
-            <Star key={j} className="w-6 h-6 fill-current" />
-            )}
-          </div>
-          <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-10">
-            "Having our restaurant, lobby bar, and spa all on one system that
-            syncs perfectly with Opera PMS has eliminated billing errors and
-            improved the guest experience immensely."
-          </p>
-          <div>
-            <div className="font-bold text-xl">David Thompson</div>
-            <div className="text-gray-400">
-              Director of F&B, The Grand Hotel
+      <section className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            className="bg-brand-gray p-10 rounded-3xl text-center relative">
+            <Quote className="w-10 h-10 text-gray-200 mx-auto mb-4" />
+            <div className="flex justify-center gap-1 mb-6 text-amber-400">
+              {[...Array(5)].map((_, j) => <Star key={j} className="w-5 h-5 fill-current" />)}
             </div>
-          </div>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">"Having one system for the restaurant, spa, and front desk changed everything. Guests love the seamless experience."</p>
+            <div className="flex items-center justify-center gap-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Isabelle" className="w-12 h-12 rounded-full object-cover" />
+              <div className="text-left">
+                <div className="font-bold text-brand-navy text-sm">Isabelle Uwimana</div>
+                <div className="text-xs text-gray-500">GM, Lake Kivu Resort, Rwanda</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-24 bg-brand-coral relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-            backgroundSize: '30px 30px'
-          }}>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80" alt="Hotel pool" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-coral/90" />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl font-bold font-heading text-white mb-6">
-            Ready to elevate your property?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-5 py-4 rounded-xl border-none focus:outline-none focus:ring-4 focus:ring-white/30 text-lg" />
-            
-            <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-lg">
-              Get Started
-            </button>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl font-bold font-heading text-white mb-6">Unify Your Property</h2>
+          <p className="text-xl text-white/90 mb-10">See Servv HMS in action for your hotel or spa.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="bg-white text-brand-coral hover:bg-gray-50 font-bold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg">Get a Free Demo</Link>
+            <Link to="/contact" className="bg-white/10 hover:bg-white/20 text-white font-bold px-10 py-4 rounded-xl transition-colors text-lg border border-white/30">Start Free Trial <ArrowRight className="w-5 h-5 inline-block ml-2" /></Link>
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }

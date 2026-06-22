@@ -7,295 +7,249 @@ import {
   ChefHat,
   BarChart3,
   Package,
-  CheckCircle2,
-  Quote,
+  Clock,
+  TrendingDown,
+  Unplug,
+  EyeOff,
+  ArrowRight,
   Star,
-  ArrowRight } from
-'lucide-react';
+  Quote,
+} from 'lucide-react';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: i * 0.1 },
+  }),
+};
+
+const images = {
+  hero: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80',
+  kitchen: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80',
+  dining: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
+  pos: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+  food: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
+  table: 'https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?auto=format&fit=crop&w=800&q=80',
+  avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+};
+
+const painPoints = [
+  {
+    icon: Clock,
+    problem: 'Slow rush-hour orders',
+    solution: 'Lightning-fast POS with handhelds for line-busting.',
+  },
+  {
+    icon: TrendingDown,
+    problem: 'Inventory waste',
+    solution: 'Ingredient-level tracking with automated low-stock alerts.',
+  },
+  {
+    icon: Unplug,
+    problem: 'Disconnected BOH & FOH',
+    solution: 'Seamless POS-to-KDS integration in real time.',
+  },
+  {
+    icon: EyeOff,
+    problem: 'No real-time visibility',
+    solution: 'Live dashboards for sales, labor, and table turns.',
+  },
+];
+
+const features = [
+  { icon: MonitorSmartphone, title: 'Point of Sale', link: '/features/pos', image: images.pos },
+  { icon: LayoutGrid, title: 'Table Management', link: '/features/table-management', image: images.table },
+  { icon: ChefHat, title: 'Kitchen Display', link: '/features/pos', image: images.kitchen },
+  { icon: Package, title: 'Inventory Control', link: '/features/inventory', image: images.food },
+  { icon: BarChart3, title: 'Analytics', link: '/features/analytics', image: images.dining },
+  { icon: UtensilsCrossed, title: 'Menu Engineering', link: '/features/analytics', image: images.kitchen },
+];
+
 export function Restaurants() {
   return (
     <div className="w-full">
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              transition={{
-                duration: 0.6
-              }}
-              className="max-w-2xl">
-              
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-orange-700 font-semibold mb-6">
-                <UtensilsCrossed className="w-5 h-5" /> For Restaurants
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Built to Run Your <br />
-                <span className="text-orange-600">Restaurant</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                From quick-service to fine dining, Servv handles the complexity
-                so you can focus on the food.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg shadow-soft">
-                  
-                  Start Free Trial
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Hero Mockup */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2
-              }}
-              className="relative h-[500px] w-full hidden lg:block">
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-[4/3] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden flex flex-col">
-                <div className="h-12 bg-gray-900 flex items-center px-4 gap-4">
-                  <div className="text-white font-bold">KDS - Line 1</div>
-                  <div className="text-gray-400 text-sm">3 Active Tickets</div>
-                </div>
-                <div className="flex-grow bg-gray-800 p-4 grid grid-cols-3 gap-4">
-                  {[
-                  {
-                    id: '1042',
-                    time: '4m',
-                    items: [
-                    '1x Classic Burger',
-                    '  - No Onions',
-                    '  - Med Rare',
-                    '1x Truffle Fries']
-
-                  },
-                  {
-                    id: '1043',
-                    time: '2m',
-                    items: [
-                    '2x Caesar Salad',
-                    '  - Add Chicken',
-                    '1x Calamari']
-
-                  },
-                  {
-                    id: '1044',
-                    time: 'New',
-                    items: [
-                    '1x Ribeye Steak',
-                    '  - Med',
-                    '  - Side Asparagus']
-
-                  }].
-                  map((ticket, i) =>
-                  <div
-                    key={i}
-                    className="bg-white rounded-lg overflow-hidden flex flex-col">
-                    
-                      <div
-                      className={`p-2 font-bold flex justify-between text-white ${i === 0 ? 'bg-red-500' : i === 1 ? 'bg-amber-500' : 'bg-green-500'}`}>
-                      
-                        <span>#{ticket.id}</span>
-                        <span>{ticket.time}</span>
-                      </div>
-                      <div className="p-3 text-sm flex-grow">
-                        {ticket.items.map((item, j) =>
-                      <div
-                        key={j}
-                        className={`mb-1 ${item.startsWith('  -') ? 'text-red-600 text-xs pl-2' : 'font-bold'}`}>
-                        
-                            {item}
-                          </div>
-                      )}
-                      </div>
-                      <div className="p-2 border-t border-gray-100 text-center text-sm font-bold text-gray-500 hover:bg-gray-50 cursor-pointer">
-                        BUMP
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+      {/* HERO */}
+      <section className="relative min-h-[600px] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={images.hero}
+            alt="Fine dining restaurant interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/70 to-brand-navy/40" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 text-orange-300 font-semibold mb-6 backdrop-blur-sm border border-orange-400/20">
+              <UtensilsCrossed className="w-5 h-5" /> For Restaurants
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-bold font-heading text-white leading-[1.1] mb-6">
+              Run Your Restaurant <br />
+              <span className="text-orange-400">Effortlessly</span>
+            </h1>
+            <p className="text-xl text-gray-200 mb-10 leading-relaxed">
+              From quick-service to fine dining -- Servv handles the complexity so you focus on the food.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/contact"
+                className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg shadow-lg"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                to="/rms"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg backdrop-blur-sm border border-white/20"
+              >
+                See How It Works
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* PAIN POINTS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              We understand your challenges
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold font-heading text-brand-navy mb-4">
+              Problems we solve
             </h2>
+            <p className="text-gray-500 text-lg">Real challenges, real solutions.</p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-            {
-              problem: 'Slow order processing during rush',
-              solution:
-              'Lightning-fast POS interface designed for speed, with handhelds for line-busting.'
-            },
-            {
-              problem: 'Inventory waste and over-ordering',
-              solution:
-              'Ingredient-level tracking and automated low-stock alerts prevent waste.'
-            },
-            {
-              problem: 'Disconnected front and back of house',
-              solution:
-              'Seamless integration between POS and Kitchen Display Systems (KDS).'
-            },
-            {
-              problem: 'Lack of real-time business visibility',
-              solution:
-              'Live dashboards show sales, labor costs, and table turns instantly.'
-            }].
-            map((item, i) =>
-            <div
-              key={i}
-              className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex gap-4">
-              
-                <div className="w-8 h-8 rounded-full bg-brand-coral/20 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-5 h-5 text-brand-coral" />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {painPoints.map((item, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                className="bg-orange-50 rounded-2xl p-6 text-center hover:shadow-card transition-shadow"
+              >
+                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <item.icon className="w-7 h-7 text-orange-600" />
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold text-brand-navy mb-2">
-                    {item.problem}
-                  </h4>
-                  <p className="text-gray-600">{item.solution}</p>
-                </div>
-              </div>
-            )}
+                <h4 className="text-lg font-bold text-brand-navy mb-2">{item.problem}</h4>
+                <p className="text-gray-600 text-sm">{item.solution}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* KEY FEATURES */}
+      {/* FEATURES GRID */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              Everything a restaurant needs
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold font-heading text-brand-navy mb-4">
+              Everything your restaurant needs
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-            {
-              icon: MonitorSmartphone,
-              title: 'Point of Sale',
-              link: '/features/pos'
-            },
-            {
-              icon: LayoutGrid,
-              title: 'Table Management',
-              link: '/features/table-management'
-            },
-            {
-              icon: ChefHat,
-              title: 'Kitchen Display',
-              link: '/features/pos'
-            },
-            {
-              icon: Package,
-              title: 'Inventory Control',
-              link: '/features/inventory'
-            },
-            {
-              icon: BarChart3,
-              title: 'Analytics',
-              link: '/features/analytics'
-            },
-            {
-              icon: UtensilsCrossed,
-              title: 'Menu Engineering',
-              link: '/features/analytics'
-            }].
-            map((feature, i) =>
-            <Link
-              key={i}
-              to={feature.link}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 group">
-              
-                <div className="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                  <feature.icon className="w-6 h-6" />
-                </div>
-                <div className="font-bold text-lg text-brand-navy">
-                  {feature.title}
-                </div>
-                <ArrowRight className="w-5 h-5 ml-auto text-gray-300 group-hover:text-orange-600 transition-colors" />
-              </Link>
-            )}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, i) => (
+              <motion.div
+                key={i}
+                custom={i}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+              >
+                <Link
+                  to={feature.link}
+                  className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-card transition-shadow"
+                >
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={feature.image}
+                      alt={feature.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <div className="p-5 flex items-center gap-4">
+                    <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors shrink-0">
+                      <feature.icon className="w-5 h-5" />
+                    </div>
+                    <span className="font-bold text-lg text-brand-navy">{feature.title}</span>
+                    <ArrowRight className="w-5 h-5 ml-auto text-gray-300 group-hover:text-orange-600 transition-colors" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* TESTIMONIAL */}
       <section className="py-24 bg-brand-navy text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-500/20 to-transparent opacity-50"></div>
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-orange-500/15 to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Quote className="w-16 h-16 text-orange-500/50 mx-auto mb-8" />
-          <div className="flex justify-center gap-1 mb-8 text-amber-400">
-            {[...Array(5)].map((_, j) =>
-            <Star key={j} className="w-6 h-6 fill-current" />
-            )}
+          <Quote className="w-12 h-12 text-orange-500/40 mx-auto mb-6" />
+          <div className="flex justify-center gap-1 mb-6 text-amber-400">
+            {[...Array(5)].map((_, j) => (
+              <Star key={j} className="w-5 h-5 fill-current" />
+            ))}
           </div>
-          <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-10">
-            "Switching to Servv was the best decision for our restaurant group.
-            The multi-location management and real-time analytics have
-            completely transformed how we operate."
+          <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-8">
+            "Servv transformed how we run our restaurant group. Multi-location analytics gave us
+            visibility we never had before."
           </p>
-          <div>
-            <div className="font-bold text-xl">Sarah Jenkins</div>
-            <div className="text-gray-400">
-              Operations Director, The Rustic Collective
+          <div className="flex items-center justify-center gap-4">
+            <img
+              src={images.avatar}
+              alt="Sarah Jenkins"
+              className="w-14 h-14 rounded-full object-cover border-2 border-orange-400"
+            />
+            <div className="text-left">
+              <div className="font-bold text-lg">Sarah Jenkins</div>
+              <div className="text-gray-400 text-sm">Operations Director, The Rustic Collective</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-24 bg-brand-coral relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-            backgroundSize: '30px 30px'
-          }}>
+      {/* CTA */}
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={images.dining}
+            alt="Restaurant dining"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-coral/90" />
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl font-bold font-heading text-white mb-6">
             Ready to transform your restaurant?
           </h2>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-5 py-4 rounded-xl border-none focus:outline-none focus:ring-4 focus:ring-white/30 text-lg" />
-            
-            <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-lg">
-              Get Started
-            </button>
+          <p className="text-white/80 text-lg mb-8">
+            Join hundreds of restaurants already running on Servv.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-white text-brand-coral hover:bg-gray-100 font-semibold px-8 py-4 rounded-xl transition-colors text-lg shadow-lg"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              to="/contact"
+              className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-8 py-4 rounded-xl transition-colors text-lg"
+            >
+              Book a Demo
+            </Link>
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }

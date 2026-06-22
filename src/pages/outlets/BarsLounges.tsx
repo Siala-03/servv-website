@@ -1,294 +1,120 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import {
-  Wine,
-  CreditCard,
-  Clock,
-  GlassWater,
-  Users,
-  ShieldCheck,
-  CheckCircle2,
-  Quote,
-  Star,
-  ArrowRight } from
-'lucide-react';
+import { Wine, Package, Clock, CreditCard, Music, ArrowRight, Star, Quote } from 'lucide-react';
+
 export function BarsLounges() {
   return (
     <div className="w-full">
-      {/* HERO SECTION */}
-      <section className="relative pt-24 pb-32 overflow-hidden bg-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 20
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              transition={{
-                duration: 0.6
-              }}
-              className="max-w-2xl">
-              
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-100 text-purple-700 font-semibold mb-6">
-                <Wine className="w-5 h-5" /> For Bars & Lounges
-              </div>
-              <h1 className="text-5xl lg:text-6xl font-bold font-heading text-brand-navy leading-[1.1] mb-6">
-                Nightlife, <br />
-                <span className="text-purple-600">Simplified</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-                Fast tabs, smart inventory, and seamless operations for bars,
-                lounges, and nightclubs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-center text-lg shadow-soft">
-                  
-                  Start Free Trial
-                </Link>
-              </div>
-            </motion.div>
-
-            {/* Hero Mockup */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.6,
-                delay: 0.2
-              }}
-              className="relative h-[500px] w-full hidden lg:block">
-              
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[600px] aspect-[4/3] bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 overflow-hidden flex flex-col text-white">
-                <div className="p-4 border-b border-gray-800 flex justify-between items-center bg-black">
-                  <div className="font-bold text-lg">Speed Screen</div>
-                  <div className="px-3 py-1 bg-purple-600 text-sm font-bold rounded">
-                    Happy Hour Active
-                  </div>
-                </div>
-                <div className="flex-grow flex p-2 gap-2">
-                  <div className="flex-grow grid grid-cols-4 gap-2">
-                    {[
-                    'Draft Beer',
-                    'Bottled Beer',
-                    'Vodka',
-                    'Tequila',
-                    'Whiskey',
-                    'Rum',
-                    'Gin',
-                    'Wine',
-                    'Cocktails',
-                    'Shots',
-                    'Mixers',
-                    'Food'].
-                    map((cat, i) =>
-                    <div
-                      key={i}
-                      className="bg-gray-800 rounded flex items-center justify-center text-center p-2 text-sm font-bold border border-gray-700 hover:bg-gray-700 cursor-pointer">
-                      
-                        {cat}
-                      </div>
-                    )}
-                  </div>
-                  <div className="w-64 bg-black rounded border border-gray-800 flex flex-col">
-                    <div className="p-3 border-b border-gray-800 font-bold flex justify-between">
-                      <span>Tab: Smith</span>
-                      <span className="text-purple-400">Pre-Auth</span>
-                    </div>
-                    <div className="flex-grow p-3 flex flex-col gap-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>2x IPA Draft</span>
-                        <span>RWF 15,000</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>1x Tito's Soda</span>
-                        <span>RWF 11,500</span>
-                      </div>
-                    </div>
-                    <div className="p-3 border-t border-gray-800">
-                      <div className="flex justify-between font-bold text-lg mb-2">
-                        <span>Total</span>
-                        <span>RWF 27,000</span>
-                      </div>
-                      <div className="w-full py-3 bg-green-600 rounded text-center font-bold">
-                        CLOSE TAB
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=1920&q=80" alt="Bar atmosphere" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-brand-navy/40" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-xl">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-purple-300 font-semibold text-sm mb-6">
+              <Wine className="w-4 h-4" /> Bars & Lounges
+            </div>
+            <h1 className="text-5xl lg:text-6xl font-extrabold font-heading text-white leading-[1.08] mb-6">
+              Pour Faster.<br /><span className="text-purple-400">Profit More.</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-10 max-w-lg">Fast tabs, happy hour automation, liquor inventory, and speed screens built for nightlife.</p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact" className="bg-purple-500 hover:bg-purple-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-lg text-center">Get a Free Demo</Link>
+              <Link to="/contact" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg border border-white/20 text-center">Start Free Trial</Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* PAIN POINTS */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              We understand your challenges
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-4">Bar Problems, Solved</h2>
+          <p className="text-gray-600 text-center mb-16 max-w-2xl mx-auto">Common nightlife headaches — and how Servv fixes them.</p>
+          <div className="grid md:grid-cols-2 gap-6">
             {[
-            {
-              problem: 'Slow tab management during peak hours',
-              solution:
-              'Pre-authorize cards instantly and use speed screens for 2-tap ordering.'
-            },
-            {
-              problem: 'Liquor inventory shrinkage',
-              solution:
-              'Precise pour tracking and recipe costing to identify missing inventory.'
-            },
-            {
-              problem: 'Complex happy hour pricing',
-              solution:
-              'Automated time-based pricing that switches without manual intervention.'
-            },
-            {
-              problem: 'High staff turnover',
-              solution:
-              'Intuitive interface that new bartenders can learn in 10 minutes.'
-            }].
-            map((item, i) =>
-            <div
-              key={i}
-              className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex gap-4">
-              
-                <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-5 h-5 text-purple-600" />
+              { icon: CreditCard, problem: 'Slow tab management', solution: 'Open, split, and close tabs in seconds with pre-auth.' },
+              { icon: Package, problem: 'Liquor shrinkage', solution: 'Track pours at the bottle level. Spot variance instantly.' },
+              { icon: Clock, problem: 'Happy hour complexity', solution: 'Auto-apply time-based pricing. No manual discounts.' },
+              { icon: Music, problem: 'Event night chaos', solution: 'Speed screens and pre-built menus for high-volume nights.' },
+            ].map((p, i) => (
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-soft hover:shadow-card transition-all flex gap-4">
+                <div className="w-12 h-12 rounded-xl bg-purple-50 flex items-center justify-center shrink-0">
+                  <p.icon className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-bold text-brand-navy mb-2">
-                    {item.problem}
-                  </h4>
-                  <p className="text-gray-600">{item.solution}</p>
+                  <h3 className="font-bold text-brand-navy mb-1">{p.problem}</h3>
+                  <p className="text-gray-600 text-sm">{p.solution}</p>
                 </div>
-              </div>
-            )}
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* KEY FEATURES */}
       <section className="py-24 bg-brand-gray">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold font-heading text-brand-navy mb-4">
-              Built for speed
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-16">Features for Nightlife</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-            {
-              icon: CreditCard,
-              title: 'Quick Tab Management',
-              link: '/features/pos'
-            },
-            {
-              icon: GlassWater,
-              title: 'Liquor Inventory',
-              link: '/features/inventory'
-            },
-            {
-              icon: Clock,
-              title: 'Happy Hour Automation',
-              link: '/features/pos'
-            },
-            {
-              icon: ShieldCheck,
-              title: 'Pre-authorization',
-              link: '/features/pos'
-            },
-            {
-              icon: Users,
-              title: 'Event Management',
-              link: '/features/table-management'
-            },
-            {
-              icon: Wine,
-              title: 'Speed Screens',
-              link: '/features/pos'
-            }].
-            map((feature, i) =>
-            <Link
-              key={i}
-              to={feature.link}
-              className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex items-center gap-4 group">
-              
-                <div className="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
-                  <feature.icon className="w-6 h-6" />
-                </div>
-                <div className="font-bold text-lg text-brand-navy">
-                  {feature.title}
-                </div>
-                <ArrowRight className="w-5 h-5 ml-auto text-gray-300 group-hover:text-purple-600 transition-colors" />
+              { title: 'Tab Management', link: '/features/pos', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Liquor Inventory', link: '/features/inventory', image: 'https://images.unsplash.com/photo-1574126154517-d1e0d89ef734?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Happy Hour Pricing', link: '/features/pos', image: 'https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Pre-Auth Cards', link: '/features/pos', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Event Management', link: '/features/table-management', image: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=400&q=80' },
+              { title: 'Speed Screens', link: '/features/pos', image: 'https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?auto=format&fit=crop&w=400&q=80' },
+            ].map((f, i) => (
+              <Link key={i} to={f.link}>
+                <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                  className="group relative h-48 rounded-2xl overflow-hidden">
+                  <img src={f.image} alt={f.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="text-white font-bold font-heading">{f.title}</h3>
+                    <span className="text-purple-300 text-sm font-medium flex items-center gap-1 mt-1">Learn more <ArrowRight className="w-3 h-3" /></span>
+                  </div>
+                </motion.div>
               </Link>
-            )}
+            ))}
           </div>
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
-      <section className="py-24 bg-brand-navy text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-purple-500/20 to-transparent opacity-50"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Quote className="w-16 h-16 text-purple-500/50 mx-auto mb-8" />
-          <div className="flex justify-center gap-1 mb-8 text-amber-400">
-            {[...Array(5)].map((_, j) =>
-            <Star key={j} className="w-6 h-6 fill-current" />
-            )}
-          </div>
-          <p className="text-2xl md:text-3xl font-medium leading-relaxed mb-10">
-            "The handheld devices have increased our table turn times by 20%.
-            Servers love them, and tips are up because the payment process is so
-            seamless."
-          </p>
-          <div>
-            <div className="font-bold text-xl">Marcus Chen</div>
-            <div className="text-gray-400">General Manager, Elevate Lounge</div>
-          </div>
+      <section className="py-24 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
+            className="bg-brand-gray p-10 rounded-3xl text-center relative">
+            <Quote className="w-10 h-10 text-gray-200 mx-auto mb-4" />
+            <div className="flex justify-center gap-1 mb-6 text-amber-400">
+              {[...Array(5)].map((_, j) => <Star key={j} className="w-5 h-5 fill-current" />)}
+            </div>
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed">"The handheld devices let bartenders open tabs from anywhere on the floor. Friday nights run 30% smoother."</p>
+            <div className="flex items-center justify-center gap-3">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80" alt="Marcus Chen" className="w-12 h-12 rounded-full object-cover" />
+              <div className="text-left">
+                <div className="font-bold text-brand-navy text-sm">Marcus Chen</div>
+                <div className="text-xs text-gray-500">Owner, The Velvet Room, Nairobi</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* CTA SECTION */}
-      <section className="py-24 bg-brand-coral relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: 'radial-gradient(#fff 2px, transparent 2px)',
-            backgroundSize: '30px 30px'
-          }}>
+      <section className="relative py-24 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://images.unsplash.com/photo-1572116469696-31de0f17cc34?auto=format&fit=crop&w=1920&q=80" alt="Bar" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-brand-coral/90" />
         </div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h2 className="text-4xl font-bold font-heading text-white mb-6">
-            Ready to speed up your bar?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-5 py-4 rounded-xl border-none focus:outline-none focus:ring-4 focus:ring-white/30 text-lg" />
-            
-            <button className="bg-brand-navy hover:bg-brand-navy-light text-white font-semibold px-8 py-4 rounded-xl transition-colors whitespace-nowrap text-lg shadow-lg">
-              Get Started
-            </button>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <h2 className="text-4xl font-bold font-heading text-white mb-6">Ready to Speed Up Your Bar?</h2>
+          <p className="text-xl text-white/90 mb-10">See Servv in action for bars and lounges.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact" className="bg-white text-brand-coral hover:bg-gray-50 font-bold px-10 py-4 rounded-xl transition-colors text-lg shadow-lg">Get a Free Demo</Link>
+            <Link to="/contact" className="bg-white/10 hover:bg-white/20 text-white font-bold px-10 py-4 rounded-xl transition-colors text-lg border border-white/30">Start Free Trial <ArrowRight className="w-5 h-5 inline-block ml-2" /></Link>
           </div>
         </div>
       </section>
-    </div>);
-
+    </div>
+  );
 }

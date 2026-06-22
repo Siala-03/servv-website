@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { Home } from './pages/Home';
-// import { Pricing } from './pages/Pricing';
+import { Pricing } from './pages/Pricing';
 import { RMS } from './pages/RMS';
 import { HMS } from './pages/HMS';
 import { Placeholder } from './pages/Placeholder';
@@ -27,7 +27,7 @@ export function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
 
-          {/* <Route path="pricing" element={<Pricing />} /> */}
+          <Route path="pricing" element={<Pricing />} />
           <Route path="rms" element={<RMS />} />
           <Route path="hms" element={<HMS />} />
 
