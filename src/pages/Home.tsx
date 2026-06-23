@@ -32,8 +32,8 @@ export function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&q=80"
-            alt="Restaurant ambiance"
+            src="https://images.unsplash.com/photo-1753507229320-dc503ab3b456?auto=format&fit=crop&w=1920&q=80"
+            alt="Restaurant interior with tables and decorative lighting"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/40" />
@@ -404,7 +404,7 @@ export function Home() {
                 title: 'Lightning Fast',
                 desc: 'Sub-second transactions during peak hours',
                 color: 'bg-amber-50 text-amber-600',
-                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80',
+                image: 'https://media.istockphoto.com/id/2231618031/photo/african-american-chef-in-a-modern-kitchen-using-laptop-to-discover-new-dishes.jpg?s=612x612&w=is&k=20&c=HY-IJVPoZPHoXOWCBk0TFcQTC2MOk1Ix-GMMITasBdw=',
               },
               {
                 icon: Wifi,
@@ -418,14 +418,14 @@ export function Home() {
                 title: 'Built for Africa',
                 desc: 'Mobile money, local payments, multi-currency',
                 color: 'bg-green-50 text-green-600',
-                image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80',
+                image: 'https://images.unsplash.com/photo-1731475761027-0b6b33b74547?auto=format&fit=crop&w=400&q=80',
               },
               {
                 icon: Headphones,
                 title: '24/7 Support',
                 desc: 'Real humans, any time, any channel',
                 color: 'bg-purple-50 text-purple-600',
-                image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=400&q=80',
+                image: 'https://images.unsplash.com/photo-1764722053231-9162ed8831d2?auto=format&fit=crop&w=400&q=80',
               },
             ].map((feature, i) => (
               <motion.div
@@ -575,22 +575,22 @@ export function Home() {
                 name: 'Servv Terminal',
                 type: 'Countertop POS',
                 icon: Monitor,
-                desc: '14" display, built-in card reader & receipt printer.',
-                image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+                desc: '14" touchscreen display, built-in card reader & receipt printer.',
+                image: 'https://images.unsplash.com/photo-1726065235239-b20b88d43eea?auto=format&fit=crop&w=800&q=80',
               },
               {
                 name: 'Servv Go',
-                type: 'Mobile Device',
+                type: 'Handheld POS',
                 icon: Smartphone,
-                desc: 'Handheld for tableside ordering with tap-to-pay.',
-                image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80',
+                desc: 'Tableside ordering and tap-to-pay — take orders anywhere on the floor.',
+                image: 'https://images.unsplash.com/photo-1726137570616-580645d83ebe?auto=format&fit=crop&w=800&q=80',
               },
               {
                 name: 'Servv KDS',
                 type: 'Kitchen Display',
                 icon: ChefHat,
-                desc: 'Rugged displays that handle heat and grease.',
-                image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80',
+                desc: 'Rugged kitchen screens that handle the heat and keep orders flowing.',
+                image: 'https://images.unsplash.com/photo-1778792447408-b22ad88daa37?auto=format&fit=crop&w=800&q=80',
               },
             ].map((hw, i) => (
               <motion.div
@@ -641,7 +641,6 @@ export function Home() {
                 name: 'Mwangi Njoroge',
                 role: 'Operations Director',
                 venue: 'Nairobi Eats, Kenya',
-                avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
               },
               {
                 quote:
@@ -649,7 +648,6 @@ export function Home() {
                 name: 'Aline Uwase',
                 role: 'General Manager',
                 venue: 'Kigali Bistro, Rwanda',
-                avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
               },
               {
                 quote:
@@ -657,7 +655,6 @@ export function Home() {
                 name: 'Joseph Okello',
                 role: 'Executive Chef',
                 venue: 'Jinja Grill, Uganda',
-                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80',
               },
             ].map((testimonial, i) => (
               <motion.div
@@ -676,11 +673,9 @@ export function Home() {
                 </div>
                 <p className="text-gray-700 mb-6 leading-relaxed">"{testimonial.quote}"</p>
                 <div className="flex items-center gap-3">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                  <div className="w-12 h-12 bg-brand-coral/10 rounded-full flex items-center justify-center text-brand-coral font-bold text-xl">
+                    {testimonial.name.charAt(0)}
+                  </div>
                   <div>
                     <div className="font-bold text-brand-navy text-sm">{testimonial.name}</div>
                     <div className="text-xs text-gray-500">

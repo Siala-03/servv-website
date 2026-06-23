@@ -26,13 +26,13 @@ const fadeUp = {
 };
 
 const images = {
-  hero: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80',
-  kitchen: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80',
-  dining: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=80',
-  pos: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-  food: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80',
-  table: 'https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?auto=format&fit=crop&w=800&q=80',
-  avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80',
+  hero: 'https://images.unsplash.com/photo-1753507229320-dc503ab3b456?auto=format&fit=crop&w=1920&q=80',
+  kitchen: 'https://images.unsplash.com/photo-1657271514819-f6cdc3e1d0a3?auto=format&fit=crop&w=800&q=80',
+  dining: 'https://images.unsplash.com/photo-1744973055006-a1c7dd30da62?auto=format&fit=crop&w=800&q=80',
+  pos: 'https://images.unsplash.com/photo-1726065235239-b20b88d43eea?auto=format&fit=crop&w=800&q=80',
+  food: 'https://images.unsplash.com/photo-1635849264649-fd415f437d8b?auto=format&fit=crop&w=800&q=80',
+  table: 'https://images.unsplash.com/photo-1687422808259-565a84e31cd0?auto=format&fit=crop&w=800&q=80',
+  menuEngineering: 'https://images.unsplash.com/photo-1709837167676-63c0750c6a4e?auto=format&fit=crop&w=800&q=80',
 };
 
 const painPoints = [
@@ -64,7 +64,7 @@ const features = [
   { icon: ChefHat, title: 'Kitchen Display', link: '/features/pos', image: images.kitchen },
   { icon: Package, title: 'Inventory Control', link: '/features/inventory', image: images.food },
   { icon: BarChart3, title: 'Analytics', link: '/features/analytics', image: images.dining },
-  { icon: UtensilsCrossed, title: 'Menu Engineering', link: '/features/analytics', image: images.kitchen },
+  { icon: UtensilsCrossed, title: 'Menu Engineering', link: '/features/analytics', image: images.menuEngineering },
 ];
 
 export function Restaurants() {
@@ -204,11 +204,9 @@ export function Restaurants() {
             visibility we never had before."
           </p>
           <div className="flex items-center justify-center gap-4">
-            <img
-              src={images.avatar}
-              alt="Sarah Jenkins"
-              className="w-14 h-14 rounded-full object-cover border-2 border-orange-400"
-            />
+            <div className="w-14 h-14 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-400 font-bold text-2xl border-2 border-orange-400">
+              S
+            </div>
             <div className="text-left">
               <div className="font-bold text-lg">Sarah Jenkins</div>
               <div className="text-gray-400 text-sm">Operations Director, The Rustic Collective</div>
