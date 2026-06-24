@@ -70,7 +70,7 @@ export function POS() {
                 icon: Zap,
                 title: 'Speed & Efficiency',
                 desc: 'Process orders 3x faster with a tap-friendly interface.',
-                img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80',
+                img: 'https://images.unsplash.com/photo-1545575950-59f935d6521c?auto=format&fit=crop&w=400&q=80',
               },
               {
                 icon: CreditCard,
@@ -82,13 +82,13 @@ export function POS() {
                 icon: WifiOff,
                 title: 'Offline Mode',
                 desc: 'Keep selling even when your internet drops.',
-                img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=80',
+                img: 'https://images.unsplash.com/photo-1607027340690-37e80b0f1b31?auto=format&fit=crop&w=400&q=80',
               },
               {
                 icon: Settings2,
                 title: 'Custom Menus',
                 desc: 'Modifiers, combos, coursing, and time-based menus.',
-                img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80',
+                img: 'https://images.unsplash.com/photo-1760888549280-4aef010720bd?auto=format&fit=crop&w=400&q=80',
               },
             ].map((benefit, i) => (
               <motion.div
@@ -203,8 +203,8 @@ export function POS() {
               className="relative rounded-2xl overflow-hidden shadow-card"
             >
               <img
-                src="https://images.unsplash.com/photo-1556742111-a301076d9d18?auto=format&fit=crop&w=800&q=80"
-                alt="Payment processing"
+                src="https://images.unsplash.com/photo-1601204670720-6efa3d6429fc?auto=format&fit=crop&w=800&q=80"
+                alt="Order management"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
@@ -220,8 +220,8 @@ export function POS() {
               className="order-2 lg:order-1 relative rounded-2xl overflow-hidden shadow-card"
             >
               <img
-                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80"
-                alt="Multi-device POS"
+                src="https://images.unsplash.com/photo-1705948354391-afb72d48f183?auto=format&fit=crop&w=800&q=80"
+                alt="Multi-device sync"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />

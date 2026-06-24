@@ -61,9 +61,9 @@ export function Inventory() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: Package, title: 'Live Stock Tracking', desc: 'Updates instantly with every POS transaction.', image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80' },
-              { icon: AlertTriangle, title: 'Smart Alerts', desc: 'Get notified before you run out.', image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80' },
-              { icon: Calculator, title: 'Recipe Costing', desc: 'Know exact food cost per dish.', image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80' },
-              { icon: Trash2, title: 'Waste Tracking', desc: 'Log spoilage and cut losses.', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80' },
+              { icon: AlertTriangle, title: 'Smart Alerts', desc: 'Get notified before you run out.', image: 'https://images.unsplash.com/photo-1728044849321-4cbffc50cc1d?auto=format&fit=crop&w=400&q=80' },
+              { icon: Calculator, title: 'Recipe Costing', desc: 'Know exact food cost per dish.', image: 'https://images.unsplash.com/photo-1640583342012-4622f31b650d?auto=format&fit=crop&w=400&q=80' },
+              { icon: Trash2, title: 'Waste Tracking', desc: 'Log spoilage and cut losses.', image: 'https://images.unsplash.com/photo-1628171577082-2c1db571c9c4?auto=format&fit=crop&w=400&q=80' },
             ].map((b, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all">

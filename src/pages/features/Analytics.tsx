@@ -34,8 +34,8 @@ export function Analytics() {
             {[
               { icon: BarChart3, title: 'Real-Time Dashboards', desc: 'Live sales, covers, and revenue at a glance.', image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80' },
               { icon: TrendingUp, title: 'Sales Analytics', desc: 'Best sellers, peak hours, revenue trends.', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80' },
-              { icon: Users, title: 'Labor Reports', desc: 'Cost per hour, overtime, productivity.', image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80' },
-              { icon: FileText, title: 'Custom Reports', desc: 'Build and schedule any report you need.', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80' },
+              { icon: Users, title: 'Labor Reports', desc: 'Cost per hour, overtime, productivity.', image: 'https://images.unsplash.com/photo-1745433921722-26dd28b318d9?auto=format&fit=crop&w=400&q=80' },
+              { icon: FileText, title: 'Custom Reports', desc: 'Build and schedule any report you need.', image: 'https://images.unsplash.com/photo-1713453018677-f5ad769c687a?auto=format&fit=crop&w=400&q=80' },
             ].map((b, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all">
@@ -89,7 +89,7 @@ export function Analytics() {
           </div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80" alt="Team meeting" className="rounded-2xl shadow-card" />
+              <img src="https://images.unsplash.com/photo-1647511256696-7f0dfd46a6a6?auto=format&fit=crop&w=800&q=80" alt="Labor cost optimization" className="rounded-2xl shadow-card" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
               <h3 className="text-3xl font-bold font-heading text-brand-navy mb-4">Labor Cost Optimization</h3>

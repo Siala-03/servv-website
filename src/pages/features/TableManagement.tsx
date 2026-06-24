@@ -34,8 +34,8 @@ export function TableManagement() {
             {[
               { icon: LayoutGrid, title: 'Visual Floor Plans', desc: 'Drag-and-drop layout editor.', image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=400&q=80' },
               { icon: Activity, title: 'Live Status', desc: 'See open, occupied, and dirty tables.', image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=400&q=80' },
-              { icon: CalendarCheck, title: 'Reservations', desc: 'Online booking with auto-confirmation.', image: 'https://images.unsplash.com/photo-1550966871-3ed3cdb51f3a?auto=format&fit=crop&w=400&q=80' },
-              { icon: ListOrdered, title: 'Smart Waitlist', desc: 'SMS alerts when tables are ready.', image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400&q=80' },
+              { icon: CalendarCheck, title: 'Reservations', desc: 'Online booking with auto-confirmation.', image: 'https://images.unsplash.com/photo-1599458252573-56ae36120de1?auto=format&fit=crop&w=400&q=80' },
+              { icon: ListOrdered, title: 'Smart Waitlist', desc: 'SMS alerts when tables are ready.', image: 'https://images.unsplash.com/photo-1586178675840-ad46ae9cc55d?auto=format&fit=crop&w=400&q=80' },
             ].map((b, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all">

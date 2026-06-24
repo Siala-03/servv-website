@@ -32,10 +32,10 @@ export function OnlineOrdering() {
           <h2 className="text-3xl font-bold font-heading text-brand-navy text-center mb-16">Every Order, One Dashboard</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Globe, title: 'Branded Site', desc: 'Your brand, your data, your revenue.', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80' },
-              { icon: Smartphone, title: 'Delivery Apps', desc: 'UberEats, Glovo & more in one place.', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=400&q=80' },
-              { icon: RefreshCw, title: 'Real-Time Sync', desc: 'Orders flow straight to POS & kitchen.', image: 'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80' },
-              { icon: BadgeDollarSign, title: 'Zero Commission', desc: 'Keep 100% on direct orders.', image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80' },
+              { icon: Globe, title: 'Branded Site', desc: 'Your brand, your data, your revenue.', image: 'https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=400&q=80' },
+              { icon: Smartphone, title: 'Delivery Apps', desc: 'UberEats, Glovo & more in one place.', image: 'https://images.unsplash.com/photo-1729860649963-d94cc3f5f5ca?auto=format&fit=crop&w=400&q=80' },
+              { icon: RefreshCw, title: 'Real-Time Sync', desc: 'Orders flow straight to POS & kitchen.', image: 'https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=400&q=80' },
+              { icon: BadgeDollarSign, title: 'Zero Commission', desc: 'Keep 100% on direct orders.', image: 'https://images.unsplash.com/photo-1556742205-e10c9486e506?auto=format&fit=crop&w=400&q=80' },
             ].map((b, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-soft border border-gray-100 group hover:shadow-card transition-all">
@@ -89,7 +89,7 @@ export function OnlineOrdering() {
           </div>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-2 lg:order-1">
-              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Food prep" className="rounded-2xl shadow-card" />
+              <img src="https://images.unsplash.com/photo-1547023717-d4a4e04021e5?auto=format&fit=crop&w=800&q=80" alt="All apps one screen" className="rounded-2xl shadow-card" />
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 lg:order-2">
               <h3 className="text-3xl font-bold font-heading text-brand-navy mb-4">All Apps, One Screen</h3>
